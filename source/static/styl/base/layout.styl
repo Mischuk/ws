@@ -1,3 +1,6 @@
+$footer = 300px
+$footerLarge = 470px
+
 html
   position relative
   min-height 100%
@@ -7,8 +10,12 @@ body
   line-height 1.2
   margin-bottom $footer + 30
   background #fff
+  @media MD
+    margin-bottom $footerLarge + 30
 footer
   height $footer
+  @media MD
+    height $footerLarge
 .wrapper
   clearfix()
   position relative
@@ -19,3 +26,15 @@ footer
   margin-left auto
   margin-right auto
 
+.bg-layout
+  anim()
+  left 0
+  top 0
+  width 100%
+  height 100%
+  background #000
+  opacity 0
+  position static
+  &.is-active
+    position absolute
+    opacity .5

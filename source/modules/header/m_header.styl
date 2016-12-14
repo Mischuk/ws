@@ -1,6 +1,264 @@
 .m_header
-  background #3b3a36
-  height 70px
-  line-height 70px
-  text-align center
-  color #fff
+  position relative
+  z-index 20
+  background #fff
+  .logo
+    padding 10px 0
+    @media screen and (min-width: 360px)
+      float left
+      width 50%
+      max-width 240px
+      height 70px
+      line-height 70px
+      padding 0
+    @media MD
+      width 357px
+      max-width 357px
+      height 115px
+      line-height 115px
+    img,
+    a
+      display block
+      max-width 100%
+    a
+      @media screen and (min-width: 360px)
+        display inline-block
+        vertical-align middle
+  .categories-nav
+    display none
+    @media MD
+      display block
+      float left
+      padding-left 20px
+      padding-top 20px
+    @media LG
+      padding-left 50px
+      padding-top 25px
+    > div
+      @media MD
+        margin 5px 0
+      @media LG
+        display inline-block
+        vertical-align middle
+        max-width 170px
+        &.map-section
+          max-width 170px
+          a
+            padding-left 30px
+          i
+            margin-top -15.5px
+        &.video-section
+          max-width 130px
+          margin-left 30px
+          a
+            padding-left 35px
+          i
+            margin-top -9px
+    a
+      position relative
+      display inline-block
+      vertical-align middle
+      font-size 14px
+      color #111
+      &:hover
+        span
+          text-decoration none
+      i
+        display none
+        @media MD
+          display inline-block
+        @media LG
+          position absolute
+          left 0
+          top 50%
+      span
+        display inline-block
+        vertical-align middle
+        text-decoration underline
+  .contacts
+    @media screen and (min-width: 360px)
+      float right
+      height 70px
+    @media MD
+      text-align left
+      height 115px
+    .email,
+    .clock
+      display none
+      @media MD
+        font-size 14px
+        margin-top 5px
+        display block
+    .clock
+      color #494846
+    .email
+      a
+        color $link
+        &:hover
+          color #111
+    .tel
+      color #111
+      font-weight bold
+      font-size 16px
+      text-align right
+      display none
+      @media screen and (min-width: 360px)
+        display block
+      @media screen and (min-width: 480px)
+        font-size 20px
+      @media MD
+        text-align left
+  .callback
+    position absolute
+    right 15px
+    bottom 10px
+    z-index 1
+    @media MD
+      position static
+      float right
+      margin-top 15px
+      margin-left 15px
+  .top-header
+    background #fff
+    @media MD
+      height 115px
+    .wrapper
+      position static
+  .bottom-header
+    height 50px
+    border-top 1px solid #dcdcdc
+    background #fff
+    z-index 2
+    border-bottom 1px solid #dcdcdc
+    @media MD
+      height 55px
+    &.is-opened
+      background url("../images/pattern-1.png") repeat 0 0
+      .menu
+        display block
+    .menu
+      anim()
+      position absolute
+      left 0
+      top 49px
+      background #fff
+      z-index 1
+      width 100%
+      display none
+      @media MD
+        display table
+        cursor default
+        position static
+        width 100%
+        height 100%
+      .dropdown-menu
+        &.is-active
+          > a
+            color $blue
+            &:after
+              transform rotate(90deg)
+          ul
+            display block
+            @media MD
+              display none !important
+      > li
+        border-bottom 1px solid #dcdcdc
+        @media MD
+          position relative
+          display table-cell
+          vertical-align middle
+          border-bottom none
+          &:before,
+          &:after
+            anim()
+            content ''
+            position absolute
+            width 0
+            height 2px
+            background $blue
+          &:before
+            top -1px
+            left 0
+          &:after
+            right 0
+            bottom -1px
+          &:hover
+            &:after, &:before
+              width 100%
+        > a
+          anim()
+          display block
+          padding-left 45px
+          position relative
+          text-transform uppercase
+          color #111
+          font-size 16px
+          line-height 1
+          font-weight bold
+          padding 15px 0 15px 45px
+          @media MD
+            padding 0 10px
+            display block
+            line-height 53px
+            text-align center
+            &:before,
+            &:after
+              anim()
+              content ''
+              position absolute
+              width 1px
+              height 12px
+              background #c8c8c8
+            &:before
+              top 50%
+              left 0px
+              margin-top -6px
+            &:after
+              bottom 50%
+              margin-bottom -6px
+              right -1px
+          @media LG
+            padding 0 20px
+          &:hover
+            @media MD
+              color $blue
+              &:before,
+              &:after
+                transition-delay .3s
+                height 55px
+                width 2px
+                background $blue
+                // margin-top 0
+                // top 0
+                z-index 1
+              &:before
+                top -1px
+                transform translateY(6px)
+              &:after
+                bottom -1px
+                transform translateY(-6px)
+          @media screen and (max-width: 991px)
+            &:after
+              content ''
+              background: url('../images/sprite.png') no-repeat -250px -50px;
+              width: 12px;
+              height: 20px;
+              position absolute
+              left 15px
+              top 50%
+              margin-top -10px
+              retina()
+        ul
+          padding-left 45px
+          padding-right 15px
+          padding-bottom 20px
+          display none
+          a
+            anim()
+            display inline-block
+            vertical-align middle
+            padding 5px 0
+            font-size 16px
+            color $link
+            &:hover
+              color #111
