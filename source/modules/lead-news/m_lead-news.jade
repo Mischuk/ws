@@ -1,0 +1,15 @@
+.m_lead-news
+  .wrapper.space
+    .section-title.border
+      h2 Новости
+      .details
+        a(href="#") Все новости
+    .columns
+      -each post in leadNews
+        .column-3
+          .item
+            .image: a(href="#"): img(src="#{post.image}" alt="")
+            .info
+              .post-date #{post.date}
+              .title: a(href="#") #{post.title}
+              .desc #{post.description}

@@ -1,0 +1,8 @@
+.m_item
+  .image
+    a(class="image" href="#" style="background-image: url('#{post.image}')")
+  .bottom
+    h3.title: a(href="#") #{post.title}
+    if item_has_description
+      .desc #{post.description}
+    else

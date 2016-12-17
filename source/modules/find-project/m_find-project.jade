@@ -1,0 +1,38 @@
+.m_find-project
+  .wrapper
+    form
+      .form-title
+        h2 Подобрать проект
+      .form-column
+        label Тип проекта
+        .input
+          select
+            option(disabled selected) Выбрать тип
+            option(value="1") Тип #1
+            option(value="2") Тип #2
+            option(value="3") Тип #3
+            option(value="4") Тип #4
+            option(value="5") Тип #5
+      .form-column
+        label Стоимость, руб.
+        .input
+          .price-inputs
+            input(type="text" placeholder="От")#sidebar-input-start
+            input(type="text" placeholder="До")#sidebar-input-finish
+          .price-range
+            #sidebar-slider-format
+      .form-column
+        label Выберите размер
+        .input
+          select
+            option(value="0" selected) Любой размер
+            option(value="1") Размер #1
+            option(value="2") Размер #2
+            option(value="3") Размер #3
+            option(value="4") Размер #4
+            option(value="5") Размер #5
+        .remark Если вы не нашли интересующий размер позвоните нам 8 (812) 300-30-30 и мы подберем для Вас индивидуальное решение!
+      .form-column
+        label &nbsp;
+        .input
+          button(class="button submit" type="submit") Подобрать проект

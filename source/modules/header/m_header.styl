@@ -156,7 +156,8 @@
           > a
             color $blue
             &:after
-              transform rotate(90deg)
+              @media screen and (max-width: 991px)
+                transform rotate(90deg)
           ul
             display block
             @media MD
@@ -192,7 +193,7 @@
           position relative
           text-transform uppercase
           color #111
-          font-size 16px
+          font-size 15px
           line-height 1
           font-weight bold
           padding 15px 0 15px 45px

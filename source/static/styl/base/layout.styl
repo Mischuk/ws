@@ -5,7 +5,7 @@ html
   position relative
   min-height 100%
 body
-  font-family 'PT Sans', sans-serif
+  font-family 'PT Sans', 'Arial', sans-serif
   font-size 18px
   line-height 1.2
   margin-bottom $footer + 30
@@ -25,7 +25,8 @@ footer
   padding-right 15px
   margin-left auto
   margin-right auto
-
+  &.space
+    padding 30px 15px
 .bg-layout
   anim()
   left 0
@@ -38,3 +39,47 @@ footer
   &.is-active
     position absolute
     opacity .5
+.columns
+  clearfix()
+.column-2
+  width 100%
+  margin-top 15px
+  @media SM
+    width 49%
+    float left
+    margin-top 2%
+    &:nth-child(even)
+      margin-left 2%
+.column-3
+  width 100%
+  margin-top 15px
+  @media SM
+    width 32%
+    float left
+    margin-top 2%
+    margin-left 2%
+    &:nth-child(3n+1)
+      margin-left 0
+      clear left
+.column-4
+  width 100%
+  margin-top 15px
+  @media screen and (min-width: 480px)
+    width 49%
+    float left
+    margin-top 2%
+    &:nth-child(even)
+      margin-left 2%
+    &:nth-child(2n+1)
+      clear left
+  @media MD
+    width 23.5%
+    margin-left 2% !important
+    &:nth-child(2n+1)
+      clear none
+    &:nth-child(even)
+      margin-left 0
+    &:nth-child(4n+1)
+      clear none
+      margin-left 0 !important
+

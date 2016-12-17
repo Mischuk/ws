@@ -1,0 +1,6 @@
+.m_lead-pluses
+  .wrapper
+    -each post in leadPluses
+      .column
+        .icon: img(src="#{post.imageSrc}" srcset="#{post.imageSrcset}" alt="")
+        .title #{post.title}

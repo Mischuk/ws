@@ -1,0 +1,8 @@
+.m_project-item
+  a(class="image" href="#" style="background-image: url('#{post.image}')")
+  .bottom
+    h3.title: a(href="#") #{post.title}
+    .desc #{post.description}
+    if project_item_has_not_details
+    else
+      .details: a(class="button-border" href="#") Подробнее

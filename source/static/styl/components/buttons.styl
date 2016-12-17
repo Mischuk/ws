@@ -72,3 +72,72 @@
   &:active
     background $orange - 5%
 
+.button-border
+  transition background 0.3s cubic-bezier(.33,.66,.66,1), color 0.3s cubic-bezier(.33,.66,.66,1)
+  position relative
+  font-weight bold
+  font-size 14px
+  display inline-block
+  vertical-align middle
+  color #fff
+  text-transform uppercase
+  border 2px solid #fff
+  border-radius $radius
+  padding 10px 35px
+  overflow hidden
+  box-shadow 1px 1px 2px rgba(0,0,0,.5)
+  &:hover
+    color $blue
+    background #fff
+  &:active
+    color $blue - 50%
+    box-shadow 0 1px 1px -1px rgba(0,0,0,.75)
+.button-white
+  transition background 0.3s cubic-bezier(.33,.66,.66,1), color 0.3s cubic-bezier(.33,.66,.66,1)
+  position relative
+  font-weight bold
+  font-size 14px
+  display inline-block
+  vertical-align middle
+  color #fff
+  text-transform uppercase
+  border 2px solid #fff
+  border-radius $radius
+  padding 20px 60px
+  overflow hidden
+  box-shadow 0 8px 15px rgba(0,0,0,.14)
+  background #fff
+  color $blue
+  &:hover
+    color $blue
+    background #fff
+    box-shadow 0 4px 7px rgba(0,0,0,.14)
+  &:active
+    position relative
+    top 1px
+    color $blue - 50%
+    box-shadow 0 1px 1px rgba(0,0,0,.64)
+
+.button-border-green
+  transition background 0.3s cubic-bezier(.33,.66,.66,1), color 0.3s cubic-bezier(.33,.66,.66,1)
+  position relative
+  font-weight bold
+  font-size 14px
+  display inline-block
+  vertical-align middle
+  color #fff
+  text-transform uppercase
+  border 1px solid $green
+  border-radius $radius
+  padding 10px 35px
+  overflow hidden
+  background #fff
+  color $green
+  &:hover
+    color #fff
+    background $green
+  &:active
+    position relative
+    top 1px
+    color $blue - 50%
+    box-shadow 0 1px 1px rgba(0,0,0,.64)

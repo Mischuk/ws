@@ -1,7 +1,7 @@
 $(function() {
     $('a[href="#"]').click(function(e){ e.preventDefault(); });
 
-    /*! IE10 viewport hack for Surface/desktop Windows 8 bug */
+    // IE10 хак для Surface/desktop Windows 8 бага
     (function () {
       'use strict';
       if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -15,7 +15,15 @@ $(function() {
       }
     })();
 
-    /*! Mask for form's input */
+    // Автоматическое увеличение высоты textarea
+    autosize($('textarea'));
+
+    // Кастомный селект
+    $('select').select2({
+      minimumResultsForSearch: Infinity
+    });
+
+    // Маски для инпутов
     function inputMask() {
       $(".mask-date").mask("99.99.9999",{placeholder:"__.__.____"});
       $(".mask-year").mask("9999",{placeholder:""});

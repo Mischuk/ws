@@ -1,0 +1,104 @@
+.m_lead-carousel
+  height 340px
+  overflow hidden
+  background: url(../images/wood-background.jpg) repeat 0 0
+  html.no-touchevents &
+    background-attachment fixed
+  @media MD
+    height 560px
+  .lead-carousel,
+  .slick-list,
+  .slick-track,
+  .slick-slide
+    height 100%
+  .slide
+    position relative
+    overflow hidden
+    opacity 0
+    &.slick-slide
+      html.touchevents &
+        .image
+          &:after
+            transition opacity 2s cubic-bezier(.33,.66,.66,1)
+            content ''
+            position absolute
+            left 0
+            top 0
+            width 100%
+            height 100%
+            background #111
+            opacity .5
+      html.no-touchevents &
+        .image
+          &:after
+            transition opacity 2s cubic-bezier(.33,.66,.66,1)
+            content ''
+            position absolute
+            left 0
+            top 0
+            width 100%
+            height 100%
+            background #111
+            opacity .9
+          img
+            opacity 1
+    &.slick-current
+      html.no-touchevents &
+        .image
+          &:after
+            opacity .5
+          img
+            transform scale(1)
+
+        h2, p, .action
+          opacity 1
+          transform translateX(0) translateY(0)
+        h2
+          transition-delay 0.33s
+        p
+          transition-delay 0.66s
+        .action
+          transition-delay 1s
+    h2,
+    p
+      color #fff
+      text-shadow 0 0 1px rgba(0,0,0,.2)
+    h2,
+    p,
+    .action
+      html.no-touchevents &
+        transition transform 0.66s cubic-bezier(.33,.66,.66,1), opacity 0.66s cubic-bezier(.33,.66,.66,1)
+        transform translateX(15px) translateY(-15px)
+        opacity 0
+    h2
+      font-size 30px
+      line-height 1
+      margin-bottom 20px
+      @media SM
+        font-size 45px
+      @media LG
+        font-size 60px
+    p
+      font-size 14px
+      line-height 20px
+      max-width 80%
+      @media SM
+        font-size 16px
+        line-height 24px
+      @media MD
+        width 60%
+    .image
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      img
+        html.no-touchevents &
+          transition transform 2s cubic-bezier(.33,.66,.66,1)
+          transform scale(1.2)
+          opacity 0
+    .action a
+      @media MD
+        padding 30px 70px
+        font-size 16px
