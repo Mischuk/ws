@@ -1,0 +1,69 @@
+.m_comments
+  clearfix()
+  padding-top 15px
+  img
+    max-width 100%
+  .item
+    clearfix()
+    position relative
+    padding-bottom 30px
+    margin-bottom 30px
+    border-bottom 1px solid #dcdcdc
+    &:last-child
+      margin-bottom 0
+  .images
+    width 35%
+    float left
+    @media LG
+      width 20%
+    .result
+      height 150px
+      width 100%
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+      @media screen and (min-width: 480px)
+        height 220px
+      @media LG
+        height 240px
+    .comment
+      margin-top 15px
+      @media LG
+        position absolute
+        right 0
+        top 0
+        width 20%
+        margin-top 0
+        padding-bottom 30px
+        height 100%
+      a
+        display block
+        border 1px solid #dddddd
+        @media LG
+          height 100%
+        img
+          display block
+          width 100%
+          height auto
+          max-height 100%
+  .comments-footer
+    .username
+      font-weight bold
+      text-transform uppercase
+      font-size 16px
+    .post
+      font-size 14px
+      font-style italic
+  .desc
+    width 65%
+    float right
+    font-size 14px
+    line-height 24px
+    color #494846
+    padding-left 15px
+    @media LG
+      width 80%
+      padding-left 30px
+      padding-right 22%
+  & + .comments-more
+    margin-top 30px

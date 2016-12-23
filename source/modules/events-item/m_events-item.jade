@@ -1,0 +1,9 @@
+.m_events-item(itemscope itemtype="http://schema.org/CreativeWork")
+  .image
+    a(href="#" style="background-image: url('#{post.image}')" itemprop="image")
+  .desc
+    .date(itemprop="dateCreated") #{post.date}
+    .title: a(href="#" itemprop="headline") #{post.title}
+    .lead(itemprop="text") #{post.description}
+    .details
+      a(class="button-border-green" href="#") Подробнее

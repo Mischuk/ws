@@ -1,0 +1,67 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Страница статьи
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Статьи
+        li: a(href="#") Страница статьи
+    .page-title
+      h2 Страница статьи
+    aside.m_sidebar
+      .sidebar-nav
+        ul
+          li: a(href="#") Акции
+          li: a(href="#") Новости
+          li: a(class="current" href="#") Технологии
+          li: a(href="#") Отзывы клиентов
+      .sidebar-similar
+        .title Смотрите так же
+        .list
+          -var item_has_description = true
+          -each post in sidebar_similar
+            .item
+              include ../modules/item/m_item.jade
+        .details
+          a(class="button-border-green" href="#") Все статьи
+    section.content
+      article
+        img(src="images/content/lead-carousel-2.jpg", alt="")
+        p.lead Блок с seo оптимизированным текстом. Каждая сосна или ель из которой мы изготавливаем пиломатериалы по-своему индивидуальны и неповторимы. Дерево по своей сути является уникальным, живым строительным материалом, его нельзя изготовить, смешав различные компоненты, оно должно вырасти! Именно это свойство древесины и послужило основой для выбора названия нашей организации - «Живой дом».
+        p 7 апреля наша бригада полным составом вернулась из Берлина, где проходила международная выставка "Современное строительство".
+        p В течение 3 дней в берлинском экспоцентре демонстрировались передовые достижения современного строительства.
+        figure
+          img(src="images/content/project-1.jpg" alt="")
+          figcaption Подпись под фотографией
+        figure
+          img(src="images/content/project-2.jpg" alt="")
+          figcaption Подпись под фотографией
+        p Архитектор Заха Хадид презентовала свой новый проект малоэтажных типовых вилл, а президент компании Unium рассказал о линейке новых цементных смесей для домов из пеноблоков.
+        p Мы уже внедрили новые знания в работу и готовы делать еще более долговечные, красивые и уютные проекты. Позвоните нам – расскажем подробности!
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+        figure
+          img(src="images/content/project-1.jpg" alt="")
+          figcaption Подпись под фотографией
+        p Архитектор Заха Хадид презентовала свой новый проект малоэтажных типовых вилл, а президент компании Unium рассказал о линейке новых цементных смесей для домов из пеноблоков.
+        p Мы уже внедрили новые знания в работу и готовы делать еще более долговечные, красивые и уютные проекты. Позвоните нам – расскажем подробности!
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+        .m_article-footer
+          .backward: a(href="#") Назад к списку
+          .social-share
+            script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+            script(src="//yastatic.net/share2/share.js")
+            div(class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+    .m_bottom-carousel
+      .section-title
+        h3 Реализованные проекты
+      .bottom-carousel
+        -each post in portfolioInner
+          .slide
+            include ../modules/item/m_item.jade

@@ -1,0 +1,175 @@
+.m_contacts
+  clearfix()
+  .info
+    @media MD
+      float left
+      width 50%
+    > div
+      position relative
+      margin-bottom 30px
+      padding-left 25px
+      font-size 16px
+      color #494846
+      a
+        color $blue
+        &:hover
+          color #111
+    .clock
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat 0 -200px;
+        width: 16px;
+        height: 16px;
+        position absolute
+        left 0
+        top 2px
+    .phones .title
+      position relative
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -50px -200px;
+        width: 16px;
+        height: 16px;
+        position absolute
+        left -25px
+        top 0
+    .email
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -100px -200px;
+        width: 16px;
+        height: 12px;
+        position absolute
+        left 0
+        top 4px
+    .address
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -150px -200px;
+        width: 10px;
+        height: 14px;
+        position absolute
+        left 3px
+        top 2px
+    .title
+      font-size 14px
+      text-transform uppercase
+      font-weight bold
+      margin-bottom 15px
+    .phones
+      .row
+        margin-bottom 10px
+      .label, .value
+        display inline-block
+        vertical-align middle
+      .label
+        text-transform uppercase
+      .value
+        color #111
+        font-weight bold
+  form
+    border 1px solid #e6e6e6
+    padding 30px
+    @media MD
+      float left
+      width 50%
+    div + div
+      margin-top 15px
+    .title
+      text-transform uppercase
+      font-weight bold
+      font-size 20px
+      color #111
+    input
+      height 50px
+      line-height 50px
+    input,
+    textarea
+      border 1px solid #c8c8c8
+      font-size 16px
+      width 100%
+      padding 0 10px
+      border-radius $radius
+      font-family 'PT Sans', 'Arial', sans-serif
+      &:focus
+        border-color $green
+    textarea
+      padding 5px 10px
+      min-height 110px
+      resize none
+    .submit
+      width 100%
+      border none
+      height 50px
+      font-size 14px
+    .input-file
+      input[type="file"]
+        opacity 0
+        display none
+      .inp-btn
+        anim()
+        position relative
+        display inline-block
+        vertical-align middle
+        border 1px solid $green
+        color #494846
+        font-size 16px
+        padding 0 30px 0 40px
+        height 50px
+        line-height 48px
+        border-radius $radius
+        cursor pointer
+        width 100%
+        @media screen and (min-width: 420px)
+          width auto
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -200px -200px;
+          width: 20px;
+          height: 20px;
+          position absolute
+          left 10px
+          top 50%
+          margin-top -(@height/2)
+          retina()
+        &:hover
+          background $green
+          color #fff
+          &:after
+            background-position -200px -250px
+      .inp-lbl
+        color #494846
+        font-size 14px
+        display inline-block
+        vertical-align middle
+        padding-left 15px
+        margin-top 15px
+        @media screen and (min-width: 420px)
+          margin-top 0
+      .inp-file-result
+        line-height 30px
+        .filename
+          display inline-block
+          vertical-align middle
+        a.remove-attached
+          display inline-block
+          vertical-align middle
+          color red
+          margin-left 5px
+    .form-columns
+      clearfix()
+      @media SM
+        &:last-child
+          .form-row:first-child
+            float left
+          .form-row:last-child
+            float right
+            margin-top 0
+    .title + .form-columns
+      .form-row
+        @media SM
+          float left
+          width 49%
+          margin-top 0
+          & + .form-row
+            margin-left 2%

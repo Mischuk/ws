@@ -35,11 +35,11 @@
 	<body>
 		<!-- Header-->
 		<header class="m_header">
-			<div class="top-header">
+			<div class="top-header" itemtype="http://schema.org/Organization" itemscope>
 				<div class="wrapper">
 					<div class="logo">
 						<a href="#">
-							<img src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 1.3x" alt>
+							<img src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 1.3x" title="WS" alt="WS" itemprop="name">
 						</a>
 					</div>
 					<div class="categories-nav">
@@ -57,15 +57,15 @@
 						</div>
 					</div>
 					<div class="callback">
-						<a class="button" href="#">Заказать звонок</a>
+						<a class="button popup" href="#popup-callback">Заказать звонок</a>
 					</div>
 					<div class="contacts">
 						<div class="vertical-outer">
 							<div class="vertical-inner">
-								<div class="tel">8 (800) 2000-60</div>
-								<div class="tel">8 (812) 300-20-20</div>
+								<div class="tel" itemprop="telephone">8 (800) 2000-60</div>
+								<div class="tel" itemprop="telephone">8 (812) 300-20-20</div>
 								<div class="email">
-									<a href="#">info@woodstandart.ru</a>
+									<a href="#" itemprop="address">info@woodstandart.ru</a>
 								</div>
 								<div class="clock">Без выходных с 11 до 20 часов</div>
 							</div>
@@ -292,13 +292,13 @@
 			<div class="m_lead-project">
 				<div class="wrapper">
 					<div class="column-2">
-						<div class="m_project-item">
+						<div class="m_project-item" itemtype="http://schema.org/CreativeWork" itemscope>
 							<a class="image" href="#" style="background-image: url('images/content/project-1.jpg')"></a>
 							<div class="bottom">
 								<h3 class="title">
-									<a href="#">Проекты домов</a>
+									<a href="#" itemprop="name">Проекты домов</a>
 								</h3>
-								<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+								<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								<div class="details">
 									<a class="button-border" href="#">Подробнее</a>
 								</div>
@@ -306,13 +306,13 @@
 						</div>
 					</div>
 					<div class="column-2">
-						<div class="m_project-item">
+						<div class="m_project-item" itemtype="http://schema.org/CreativeWork" itemscope>
 							<a class="image" href="#" style="background-image: url('images/content/project-2.jpg')"></a>
 							<div class="bottom">
 								<h3 class="title">
-									<a href="#">Проекты бань</a>
+									<a href="#" itemprop="name">Проекты бань</a>
 								</h3>
-								<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+								<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								<div class="details">
 									<a class="button-border" href="#">Подробнее</a>
 								</div>
@@ -320,13 +320,13 @@
 						</div>
 					</div>
 					<div class="column-2">
-						<div class="m_project-item">
+						<div class="m_project-item" itemtype="http://schema.org/CreativeWork" itemscope>
 							<a class="image" href="#" style="background-image: url('images/content/project-3.jpg')"></a>
 							<div class="bottom">
 								<h3 class="title">
-									<a href="#">Проекты коттеджей</a>
+									<a href="#" itemprop="name">Проекты коттеджей</a>
 								</h3>
-								<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+								<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								<div class="details">
 									<a class="button-border" href="#">Подробнее</a>
 								</div>
@@ -334,13 +334,13 @@
 						</div>
 					</div>
 					<div class="column-2">
-						<div class="m_project-item">
+						<div class="m_project-item" itemtype="http://schema.org/CreativeWork" itemscope>
 							<a class="image" href="#" style="background-image: url('images/content/project-4.jpg')"></a>
 							<div class="bottom">
 								<h3 class="title">
-									<a href="#">Садовые дома</a>
+									<a href="#" itemprop="name">Садовые дома</a>
 								</h3>
-								<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+								<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								<div class="details">
 									<a class="button-border" href="#">Подробнее</a>
 								</div>
@@ -351,7 +351,7 @@
 			</div>
 			<div class="m_find-project">
 				<div class="wrapper">
-					<form>
+					<form class="m_find-project-form">
 						<div class="form-title">
 							<h2>Подобрать проект</h2>
 						</div>
@@ -412,7 +412,7 @@
 								<i>Задайте нам свой вопрос и мы подробно расскажем о наших услугах, видах работ и типовых проектах, рассчитаем стоимость и подготовим индивидульное предложение!</i>
 							</p>
 							<div class="action">
-								<a class="button-white" href="#">Задать вопрос</a>
+								<a class="button-white popup" href="#popup-question">Задать вопрос</a>
 							</div>
 						</div>
 					</div>
@@ -428,49 +428,49 @@
 					</div>
 					<div class="columns">
 						<div class="column-4">
-							<div class="m_item">
+							<div class="m_item" itemtype="http://schema.org/ImageObject" itemscope>
 								<div class="image">
-									<a class="image" href="#" style="background-image: url('images/content/project-1.jpg')"></a>
+									<a class="image" href="#" style="background-image: url('images/content/project-1.jpg')" itemprop="contentUrl"></a>
 								</div>
 								<div class="bottom">
 									<h3 class="title">
-										<a href="#">Загородный дом 253 кв. м.</a>
+										<a href="#" itemprop="name">Загородный дом 253 кв. м.</a>
 									</h3>
 								</div>
 							</div>
 						</div>
 						<div class="column-4">
-							<div class="m_item">
+							<div class="m_item" itemtype="http://schema.org/ImageObject" itemscope>
 								<div class="image">
-									<a class="image" href="#" style="background-image: url('images/content/project-2.jpg')"></a>
+									<a class="image" href="#" style="background-image: url('images/content/project-2.jpg')" itemprop="contentUrl"></a>
 								</div>
 								<div class="bottom">
 									<h3 class="title">
-										<a href="#">Загородный дом 253 кв. м.</a>
+										<a href="#" itemprop="name">Загородный дом 253 кв. м.</a>
 									</h3>
 								</div>
 							</div>
 						</div>
 						<div class="column-4">
-							<div class="m_item">
+							<div class="m_item" itemtype="http://schema.org/ImageObject" itemscope>
 								<div class="image">
-									<a class="image" href="#" style="background-image: url('images/content/project-3.jpg')"></a>
+									<a class="image" href="#" style="background-image: url('images/content/project-3.jpg')" itemprop="contentUrl"></a>
 								</div>
 								<div class="bottom">
 									<h3 class="title">
-										<a href="#">Загородный дом 253 кв. м.</a>
+										<a href="#" itemprop="name">Загородный дом 253 кв. м.</a>
 									</h3>
 								</div>
 							</div>
 						</div>
 						<div class="column-4">
-							<div class="m_item">
+							<div class="m_item" itemtype="http://schema.org/ImageObject" itemscope>
 								<div class="image">
-									<a class="image" href="#" style="background-image: url('images/content/project-4.jpg')"></a>
+									<a class="image" href="#" style="background-image: url('images/content/project-4.jpg')" itemprop="contentUrl"></a>
 								</div>
 								<div class="bottom">
 									<h3 class="title">
-										<a href="#">Загородный дом 253 кв. м.</a>
+										<a href="#" itemprop="name">Загородный дом 253 кв. м.</a>
 									</h3>
 								</div>
 							</div>
@@ -488,54 +488,54 @@
 					</div>
 					<div class="columns">
 						<div class="column-4">
-							<div class="m_item">
+							<div class="m_item" itemtype="http://schema.org/ImageObject" itemscope>
 								<div class="image">
-									<a class="image" href="#" style="background-image: url('images/content/project-1.jpg')"></a>
+									<a class="image" href="#" style="background-image: url('images/content/project-1.jpg')" itemprop="contentUrl"></a>
 								</div>
 								<div class="bottom">
 									<h3 class="title">
-										<a href="#">Как правильно подобрать систему кондиционирования для загородного дома?</a>
+										<a href="#" itemprop="name">Как правильно подобрать систему кондиционирования для загородного дома?</a>
 									</h3>
-									<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+									<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								</div>
 							</div>
 						</div>
 						<div class="column-4">
-							<div class="m_item">
+							<div class="m_item" itemtype="http://schema.org/ImageObject" itemscope>
 								<div class="image">
-									<a class="image" href="#" style="background-image: url('images/content/project-2.jpg')"></a>
+									<a class="image" href="#" style="background-image: url('images/content/project-2.jpg')" itemprop="contentUrl"></a>
 								</div>
 								<div class="bottom">
 									<h3 class="title">
-										<a href="#">Как правильно подобрать систему кондиционирования для загородного дома?</a>
+										<a href="#" itemprop="name">Как правильно подобрать систему кондиционирования для загородного дома?</a>
 									</h3>
-									<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+									<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								</div>
 							</div>
 						</div>
 						<div class="column-4">
-							<div class="m_item">
+							<div class="m_item" itemtype="http://schema.org/ImageObject" itemscope>
 								<div class="image">
-									<a class="image" href="#" style="background-image: url('images/content/project-3.jpg')"></a>
+									<a class="image" href="#" style="background-image: url('images/content/project-3.jpg')" itemprop="contentUrl"></a>
 								</div>
 								<div class="bottom">
 									<h3 class="title">
-										<a href="#">Как правильно подобрать систему кондиционирования для загородного дома?</a>
+										<a href="#" itemprop="name">Как правильно подобрать систему кондиционирования для загородного дома?</a>
 									</h3>
-									<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+									<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								</div>
 							</div>
 						</div>
 						<div class="column-4">
-							<div class="m_item">
+							<div class="m_item" itemtype="http://schema.org/ImageObject" itemscope>
 								<div class="image">
-									<a class="image" href="#" style="background-image: url('images/content/project-4.jpg')"></a>
+									<a class="image" href="#" style="background-image: url('images/content/project-4.jpg')" itemprop="contentUrl"></a>
 								</div>
 								<div class="bottom">
 									<h3 class="title">
-										<a href="#">Как правильно подобрать систему кондиционирования для загородного дома?</a>
+										<a href="#" itemprop="name">Как правильно подобрать систему кондиционирования для загородного дома?</a>
 									</h3>
-									<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+									<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								</div>
 							</div>
 						</div>
@@ -551,51 +551,51 @@
 						</div>
 					</div>
 					<div class="columns">
-						<div class="column-3">
-							<div class="item">
+						<div class="column">
+							<div class="item" itemtype="http://schema.org/CreativeWork" itemscope>
 								<div class="image">
 									<a href="#">
-										<img src="images/content/project-1.jpg" alt>
+										<img src="images/content/project-1.jpg" alt itemprop="image">
 									</a>
 								</div>
 								<div class="info">
-									<div class="post-date">7 октября 2016</div>
+									<div class="post-date" itemprop="dateCreated">7 октября 2016</div>
 									<div class="title">
-										<a href="#">Коттедж в стиле лофт на берегу озера</a>
+										<a href="#" itemprop="headline">Коттедж в стиле лофт на берегу озера</a>
 									</div>
-									<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+									<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								</div>
 							</div>
 						</div>
-						<div class="column-3">
-							<div class="item">
+						<div class="column">
+							<div class="item" itemtype="http://schema.org/CreativeWork" itemscope>
 								<div class="image">
 									<a href="#">
-										<img src="images/content/project-2.jpg" alt>
+										<img src="images/content/project-2.jpg" alt itemprop="image">
 									</a>
 								</div>
 								<div class="info">
-									<div class="post-date">7 октября 2016</div>
+									<div class="post-date" itemprop="dateCreated">7 октября 2016</div>
 									<div class="title">
-										<a href="#">Коттедж в стиле лофт на берегу озера</a>
+										<a href="#" itemprop="headline">Коттедж в стиле лофт на берегу озера</a>
 									</div>
-									<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+									<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								</div>
 							</div>
 						</div>
-						<div class="column-3">
-							<div class="item">
+						<div class="column">
+							<div class="item" itemtype="http://schema.org/CreativeWork" itemscope>
 								<div class="image">
 									<a href="#">
-										<img src="images/content/project-3.jpg" alt>
+										<img src="images/content/project-3.jpg" alt itemprop="image">
 									</a>
 								</div>
 								<div class="info">
-									<div class="post-date">7 октября 2016</div>
+									<div class="post-date" itemprop="dateCreated">7 октября 2016</div>
 									<div class="title">
-										<a href="#">Коттедж в стиле лофт на берегу озера</a>
+										<a href="#" itemprop="headline">Коттедж в стиле лофт на берегу озера</a>
 									</div>
-									<div class="desc">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
+									<div class="desc" itemprop="description">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое...</div>
 								</div>
 							</div>
 						</div>
@@ -634,7 +634,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<a class="button" href="#">Заказать звонок</a>
+						<a class="popup button" href="#popup-callback">Заказать звонок</a>
 					</div>
 				</div>
 				<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -644,12 +644,19 @@
 		<!-- Footer-->
 		<footer class="m_footer">
 			<div class="wrapper">
-				<div class="column">
-					<div class="copyright">ПКС «Деревянный стандарт» — 2016</div>
-					<div class="address">Санкт-Петербург, название улицы, дом 51, корп.,1</div>
+				<div class="column" itemtype="http://schema.org/Organization" itemscope>
+					<div class="copyright">
+						<span itemprop="name">ПКС «Деревянный стандарт»</span> — 2016</div>
+					<div class="address" itemtype="http://schema.org/PostalAddress" itemprop="address" itemscope>
+						<span itemprop="addressLocality">Санкт-Петербург</span>,
+						<span itemprop="streetAddress">название улицы, дом 51, корп.,1</span>
+					</div>
 					<div class="phones">
 						<div class="label">Телефоны:</div>
-						<div class="value">8 (800) 2000-600, 8 (812) 300-20-20</div>
+						<div class="value">
+							<span itemprop="telephone">8 (800) 2000-600</span>,
+							<span itemprop="telephone">8 (812) 300-20-20</span>
+						</div>
 					</div>
 					<div class="sharing">
 						<div class="label">Мы в соц. сетях:</div>
@@ -757,6 +764,201 @@
 				</div>
 			</div>
 		</footer>
+		<!-- Popups-->
+		<a class="popup" id="success-trigger" href="#popup-success"></a>
+		<div class="popup-window zoom-anim-dialog mfp-hide" id="popup-success">
+			<div class="popup-title">Спасибо за обращение!</div>
+			<p>Наш менеджер свяжеться с Вами в ближайшее время.</p>
+			<div class="social-share">
+				<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+				<script src="//yastatic.net/share2/share.js"></script>
+				<span>Мы в соц. сетях:</span>
+				<div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir"></div>
+			</div>
+		</div>
+		<div class="popup-window zoom-anim-dialog mfp-hide" id="popup-callback">
+			<div class="popup-title">Заказать обратный звонок</div>
+			<form>
+				<div class="form-row">
+					<input type="text" placeholder="Ваше имя">
+				</div>
+				<div class="form-row">
+					<input type="tel" placeholder="Ваш номер телефона">
+				</div>
+				<div class="form-row">
+					<button class="button submit" type="submit">Заказать</button>
+				</div>
+			</form>
+		</div>
+		<div class="popup-window zoom-anim-dialog mfp-hide" id="popup-question">
+			<div class="popup-title">Задать вопрос специалисту</div>
+			<form>
+				<div class="form-row">
+					<input type="text" placeholder="Ваше имя">
+				</div>
+				<div class="form-row">
+					<input type="tel" placeholder="Ваш номер телефона">
+				</div>
+				<div class="form-row">
+					<input type="email" placeholder="Ваш email">
+				</div>
+				<div class="form-row">
+					<textarea placeholder="Текст сообщения"></textarea>
+				</div>
+				<div class="form-row">
+					<div class="input-file">
+						<label>
+							<input class="inp-file" type="file">
+							<span class="inp-btn">Добавить файл</span>
+							<span class="inp-lbl">Файл не найден</span>
+						</label>
+						<div class="inp-file-result" style="display:none">
+							<div class="filename"></div>
+							<a class="remove-attached" href="#" title="Удалить файл">×</a>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<button class="button submit" type="submit">Задать вопрос</button>
+				</div>
+			</form>
+		</div>
+		<div class="popup-window zoom-anim-dialog mfp-hide" id="popup-request">
+			<div class="popup-title">Отправить заявку</div>
+			<form>
+				<div class="form-row">
+					<input type="text" placeholder="Ваше имя">
+				</div>
+				<div class="form-row">
+					<input type="tel" placeholder="Ваш номер телефона">
+				</div>
+				<div class="form-row">
+					<input type="email" placeholder="Ваш email">
+				</div>
+				<div class="form-row">
+					<textarea placeholder="Текст сообщения"></textarea>
+				</div>
+				<div class="form-row">
+					<div class="input-file">
+						<label>
+							<input class="inp-file" type="file">
+							<span class="inp-btn">Добавить файл</span>
+							<span class="inp-lbl">Файл не найден</span>
+						</label>
+						<div class="inp-file-result" style="display:none">
+							<div class="filename"></div>
+							<a class="remove-attached" href="#" title="Удалить файл">×</a>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<button class="button submit" type="submit">Отправить заявку</button>
+				</div>
+			</form>
+		</div>
+		<div class="popup-window zoom-anim-dialog mfp-hide" id="popup-calc">
+			<div class="popup-title">Заказать расчет стоимости</div>
+			<div class="selected-project">
+				<div class="image">
+					<a href="#">
+						<img src="images/content/project-1.jpg" alt>
+					</a>
+				</div>
+				<div class="title">
+					<a href="#">Наименование карточки проекта</a>
+				</div>
+			</div>
+			<form>
+				<div class="form-row">
+					<input type="text" placeholder="Ваше имя">
+				</div>
+				<div class="form-row">
+					<input type="tel" placeholder="Ваш номер телефона">
+				</div>
+				<div class="form-row">
+					<input type="email" placeholder="Ваш email">
+				</div>
+				<div class="form-row">
+					<input type="text" placeholder="Адрес строительства">
+				</div>
+				<div class="form-row">
+					<div class="label">Нужен ли фундамент?</div>
+					<div class="checkboxes">
+						<div class="item">
+							<label>
+								<input name="ch-a" type="radio" checked>
+								<span class="check-icon"></span>
+								<span class="check-label">Да</span>
+							</label>
+						</div>
+						<div class="item">
+							<label>
+								<input name="ch-a" type="radio">
+								<span class="check-icon"></span>
+								<span class="check-label">Нет</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="label">Наличие на участке электричества?</div>
+					<div class="checkboxes">
+						<div class="item">
+							<label>
+								<input name="ch-b" type="radio">
+								<span class="check-icon"></span>
+								<span class="check-label">Да</span>
+							</label>
+						</div>
+						<div class="item">
+							<label>
+								<input name="ch-b" type="radio" checked>
+								<span class="check-icon"></span>
+								<span class="check-label">Нет</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="label">Наличие места для проживания стротелей?</div>
+					<div class="checkboxes">
+						<div class="item">
+							<label>
+								<input name="ch-c" type="radio">
+								<span class="check-icon"></span>
+								<span class="check-label">Да</span>
+							</label>
+						</div>
+						<div class="item">
+							<label>
+								<input name="ch-c" type="radio" checked>
+								<span class="check-icon"></span>
+								<span class="check-label">Нет</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<textarea placeholder="Текст сообщения"></textarea>
+				</div>
+				<div class="form-row">
+					<div class="input-file">
+						<label>
+							<input class="inp-file" type="file">
+							<span class="inp-btn">Добавить файл</span>
+							<span class="inp-lbl">Файл не найден</span>
+						</label>
+						<div class="inp-file-result" style="display:none">
+							<div class="filename"></div>
+							<a class="remove-attached" href="#" title="Удалить файл">×</a>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<button class="button submit" type="submit">Заказать</button>
+				</div>
+			</form>
+		</div>
 		<div class="bg-layout"></div>
 		<!-- Javascript-->
 		<script src="js/jquery.min.js"></script>

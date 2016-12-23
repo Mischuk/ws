@@ -116,6 +116,6 @@ function sidebarFilters() {
   });
 };
 
-if ( $('.m_find-project').length ) {
+if ( $('.m_find-project-form').length ) {
   sidebarFilters();
 }

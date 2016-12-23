@@ -1,0 +1,49 @@
+.m_article-types
+  clearfix()
+  border-top 1px solid #dcdcdc
+  border-bottom 1px solid #dcdcdc
+  padding-bottom 15px
+  padding-top 15px
+  margin-top 30px
+  .section-title h3
+    padding-top 0
+  .item
+    height 200px
+    float left
+    width 48%
+    margin-left 4%
+    margin-bottom 15px
+    &:nth-child(2n+1)
+      clear left
+      margin-left 0
+    @media SM
+      width 23.5%
+      margin-left 2%
+      &:nth-child(2n+1)
+        clear none
+        margin-left 2%
+      &:first-child
+        margin-left 0
+    & + .item
+      border 2px solid $green
+      text-align center
+    .image
+      width 100%
+      height 100%
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+    .title
+      text-transform uppercase
+      font-weight bold
+      font-size 20px
+      margin-bottom 20px
+    .desc
+      font-size 14px
+      line-height 20px
+      color #494846
+      margin-bottom 20px
+    .cost
+      color $green
+      font-size 16px
+      font-weight bold

@@ -1,0 +1,62 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Карта реализованных объектов
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Реализованные проекты
+        li: a(href="#") Карта реализованных объектов
+    .page-title
+      h2 Карта реализованных объектов
+    section.content
+      article
+        .excerpt
+          p  Блок с seo оптимизированным текстом. Каждая сосна или ель из которой мы изготавливаем пиломатериалы по-своему индивидуальны и неповторимы. Дерево по своей сути является уникальным, живым строительным материалом, его нельзя изготовить, смешав различные компоненты, оно должно вырасти! Именно это свойство древесины и послужило основой для выбора названия нашей организации - «Живой дом».
+          .excerpt-hidden(style="display: none")
+            p В далёком 2001 году мы начинали свой путь со строительства небольших деревянных домов и бань. С января 2009 года мы осуществляем свою деятельность под брендом «Живой дом».<br>На сегодняшний день «Живой дом» представляет из себя вертикально интегрированную компанию осуществляющую полный цикл лесозаготовки и деревопереработки.
+            p Мы производим и реализуем широкий ассортимент качественных пиломатериалов и как и прежде строим для вас качественные и не дорогие деревянные дома и коттеджи по различным технологиям.
+          a(class="excerpt-button" href="#") Подробнее
+  .m_map-objects
+    script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script.
+      var mapIcons = { iconLayout: 'default#image', iconImageHref: 'images/marker.png', iconImageSize: [42, 56], iconImageOffset: [-22, -56], balloonPanelMaxMapArea: 0 };
+      var SPB = [59.939095, 30.315868];
+
+      ymaps.ready(init);
+
+      function init () {
+          var myMap = new ymaps.Map("mapObjects", {
+                  center: SPB,
+                  zoom: 12,
+                  controls: ['zoomControl']
+              }, {
+                  searchControlProvider: 'yandex#search'
+              }),
+              myPlacemark = new ymaps.Placemark([59.941244, 30.302145], {
+                  balloonContentHeader: "<a class='placemark-link' href='#'>Дом каркасный 5х6 на берегу озера</a>",
+                  balloonContentBody: "<div class='placemark-desc'>Блок с seo оптимизированным текстом. Каждая сосна или ель из которой мы изготавливаем пиломатериалы по-своему индивидуальны.</div>",
+                  hintContent: "Хинт метки",
+              },mapIcons);
+              myPlacemark2 = new ymaps.Placemark([59.910568, 30.350897], {
+                  balloonContentHeader: "<a class='placemark-link' href='#'>Дом каркасный 5х6 на берегу озера</a>",
+                  balloonContentBody: "<div class='placemark-desc'>Блок с seo оптимизированным текстом. Каждая сосна или ель из которой мы изготавливаем пиломатериалы по-своему индивидуальны.</div>",
+                  hintContent: "Хинт метки",
+              },mapIcons);
+              myPlacemark3 = new ymaps.Placemark([59.945034, 30.213568], {
+                  balloonContentHeader: "<a class='placemark-link' href='#'>Дом каркасный 5х6 на берегу озера</a>",
+                  balloonContentBody: "<div class='placemark-desc'>Блок с seo оптимизированным текстом. Каждая сосна или ель из которой мы изготавливаем пиломатериалы по-своему индивидуальны.</div>",
+                  hintContent: "Хинт метки",
+              },mapIcons);
+          myMap.behaviors.disable('scrollZoom');
+          myMap.geoObjects.add(myPlacemark);
+          myMap.geoObjects.add(myPlacemark2);
+          myMap.geoObjects.add(myPlacemark3);
+      }
+    #mapObjects

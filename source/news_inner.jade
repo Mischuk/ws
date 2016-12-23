@@ -1,0 +1,62 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Страница акции
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Спецпредложения и акции
+        li: a(href="#") Страница акции
+    .page-title
+      h2 Страница новостной записи
+    aside.m_sidebar
+      .sidebar-nav
+        ul
+          li: a(class="current" href="#") Акции
+          li: a(href="#") Новости
+          li: a(href="#") Технологии
+          li: a(href="#") Отзывы клиентов
+      .sidebar-help
+        p Задайте нам свой вопрос и мы подробно расскажем о наших услугах, видах работ и типовых проектах, рассчитаем стоимость и подготовим индивидульное предложение!
+        .action: a(class="popup button-white" href="#popup-question") Задать вопрос
+    section.content
+      article
+        img(src="images/content/lead-carousel-2.jpg", alt="")
+        .post-date 08 апреля 2016
+        p 7 апреля наша бригада полным составом вернулась из Берлина, где проходила международная выставка "Современное строительство".
+        p В течение 3 дней в берлинском экспоцентре демонстрировались передовые достижения современного строительства.
+        p Архитектор Заха Хадид презентовала свой новый проект малоэтажных типовых вилл, а президент компании Unium рассказал о линейке новых цементных смесей для домов из пеноблоков.
+        p Мы уже внедрили новые знания в работу и готовы делать еще более долговечные, красивые и уютные проекты. Позвоните нам – расскажем подробности!
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+        .m_article-carousel
+          .section-title
+            h3 В акции участвуют
+          .article-carousel
+            -each post in portfolioInner
+              .slide
+                include ../modules/item/m_item.jade
+        .m_hook
+          .vertical-outer
+            .vertical-inner
+              p: b Оформите заявку на сайте. Наш менеджер свяжется с вами для уточнения деталей.
+              .action
+                a(class="button-white popup" href="#popup-request") Оформить заявку
+        .m_article-footer
+          .backward: a(href="#") Назад к списку
+          .social-share
+            script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+            script(src="//yastatic.net/share2/share.js")
+            div(class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+    .m_bottom-carousel
+      .section-title
+        h3 Реализованные проекты
+      .bottom-carousel
+        -each post in portfolioInner
+          .slide
+            include ../modules/item/m_item.jade

@@ -1,12 +1,12 @@
 // Footer
 footer.m_footer
   .wrapper
-    .column
-      .copyright ПКС «Деревянный стандарт» — 2016
-      .address Санкт-Петербург, название улицы, дом 51, корп.,1
+    .column(itemscope itemtype="http://schema.org/Organization")
+      .copyright <span itemprop="name">ПКС «Деревянный стандарт»</span> — 2016
+      .address(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress") <span itemprop="addressLocality">Санкт-Петербург</span>, <span itemprop="streetAddress">название улицы, дом 51, корп.,1</span>
       .phones
         .label Телефоны:
-        .value 8 (800) 2000-600, 8 (812) 300-20-20
+        .value <span itemprop="telephone">8 (800) 2000-600</span>, <span itemprop="telephone">8 (812) 300-20-20</span>
       .sharing
         .label Мы в соц. сетях:
         script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")

@@ -35,6 +35,12 @@ p
       line-height 1
     @media LG
       font-size 36px
+  h3
+    font-size 18px
+    text-transform uppercase
+    padding-top 15px
+    @media screen and (min-width: 480px)
+      font-size 24px
   .details
     position absolute
     right 15px
@@ -64,9 +70,181 @@ p
         color #fff
       &:active
         background #88b000 - 15%
-
+.page-title
+  padding-bottom 25px
+  clearfix()
+  position relative
+  h2
+    font-size 30px
+    line-height 0.8
+    @media screen and (min-width: 480px)
+      line-height 1
+      float left
+    @media LG
+      font-size 36px
+  .details
+    display block
+    margin-top 10px
+    @media screen and (min-width: 480px)
+      float left
+      margin-top 0
+      margin-left 20px
+    @media LG
+      padding-top 5px
+    a
+      anim()
+      display inline-block
+      vertical-align middle
+      color #88b000
+      border 1px solid #88b000
+      border-radius $radius
+      font-size 12px
+      text-align center
+      padding 5px 10px
+      font-weight bold
+      text-transform uppercase
+      @media screen and (min-width: 480px)
+        padding 7px 10px
+      &:hover
+        background #88b000
+        color #fff
+      &:active
+        background #88b000 - 15%
+  .projects-nav
+    clearfix()
+    padding-top 15px
+    @media screen and (min-width: 480px)
+      float left
+      width 100%
+    @media screen and (min-width: 666px)
+      width auto
+      width 350px
+      float right
+      margin-top -15px
+    @media screen and (min-width: 768px)
+      width 380px
+    a
+      position relative
+      display inline-block
+      vertical-align middle
+      height 40px
+      line-height 34px
+      border 1px solid #dcdcdc
+      span
+        color $blur
+        font-size 14px
+        text-decoration underline
+      &:hover
+        border-color $green
+        span
+          color #111
+          text-decoration none
+    .prev
+      float left
+      padding-left 5px
+      padding-right 5px
+      @media screen and (min-width: 380px)
+        padding-left 30px
+        padding-right 10px
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -200px -50px;
+          width: 12px;
+          height: 20px;
+          position absolute
+          left 10px
+          top 50%
+          margin-top -(@height/2)
+          retina()
+      @media screen and (min-width: 768px)
+        padding-left 40px
+        padding-right 20px
+        &:after
+          left 15px
+    .next
+      float right
+      padding-right 5px
+      padding-left 5px
+      @media screen and (min-width: 380px)
+        padding-left 10px
+        padding-right 30px
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -250px -50px;
+          width: 12px;
+          height: 20px;
+          position absolute
+          right 10px
+          top 50%
+          margin-top -(@height/2)
+          retina()
+      @media screen and (min-width: 768px)
+        padding-left 20px
+        padding-right 40px
+        &:after
+          right 15px
 article
   p
     font-size 14px
     line-height 20px
     color #494846
+    &.lead
+      font-size 18px
+      line-height 28px
+      color #111
+      @media MD
+        font-size 20px
+        line-height 24px
+    &:last-child
+      margin-bottom 0
+  img
+    display block
+    width 100%
+    margin-bottom 15px
+  > h3
+    text-transform uppercase
+    font-size 18px
+    margin-top 30px
+    margin-bottom 15px
+    @media SM
+      font-size 24px
+  > h4
+    text-transform uppercase
+    font-size 16px
+    margin-top 15px
+    margin-bottom 15px
+  > ul
+    margin-bottom 15px
+    li
+      font-size 16px
+      color #494846
+      &:before
+        content '•'
+        color $blue
+        margin-right 10px
+      & + li
+        margin-top 15px
+  figure
+    width 100%
+    display inline-block
+    vertical-align top
+    text-align center
+    @media SM
+      &.half
+        width 49.3%
+    img
+      margin-bottom 10px
+    figcaption
+      margin-bottom 20px
+      font-style italic
+      font-size 14px
+      color #494846
+  .post-date
+    background $orange
+    color #fff
+    display inline-block
+    vertical-align middle
+    padding 5px
+    font-size 12px
+    text-transform uppercase
+    margin-bottom 10px

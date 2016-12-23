@@ -1,0 +1,54 @@
+.m_paginations
+  margin-bottom 30px
+  margin-top 30px
+  ul
+    cursor default
+  li
+    display inline-block
+    vertical-align middle
+    a
+      position relative
+      display inline-block
+      vertical-align middle
+      width 30px
+      height 30px
+      line-height 30px
+      text-align center
+      color $blue
+      font-weight bold
+      font-size 16px
+      text-decoration underline
+      &.current,
+      &:hover
+        color #111
+        text-decoration none
+      &.prev
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat 0 -100px;
+          width: 16px;
+          height: 11px;
+          position absolute
+          left 50%
+          top 50%
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+          retina()
+        &:hover
+          &:after
+            background-position 0 -150px
+      &.next
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -50px -100px;
+          width: 16px;
+          height: 11px;
+          position absolute
+          left 50%
+          top 50%
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+          retina()
+        &:hover
+          &:after
+            background-position -50px -150px

@@ -31,5 +31,93 @@ $(function() {
     };
     inputMask();
 
+    // Модальные окна
+    $('.popup').magnificPopup({
+      type: 'inline',
+      fixedContentPos: false,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+    $('.m_item .video').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false
+      });
+    // Добавление названия прикрепленного файла в input[type=file]
+    $('.inp-file').on('change', function(){
+      if ( !$(this).val() == '' ) {
+        var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
+        $(this).parent().hide();
+        $(this).parent().next().show();
+        $(this).parent().next().find('.filename').text(filename);
+      }
+    });
+    // Очистка input[type=file] и прикрепленного файла
+    $('.remove-attached').on('click', function(){
+      $(this).parent().hide();
+      $(this).parent().prev().show();
+      $(this).parent().prev().find('input').val('');
+    });
+
+    // Блок Читать далее(Подробнее)
+    function excerpt() {
+      var $excerptBtn = $('.excerpt-button');
+      $excerptBtn.on('click', function(){
+        $(this).text(function(i, text){
+          return text === "Подробнее" ? "Скрыть" : "Подробнее";
+        });
+        $(this).prev().toggle();
+      });
+    }
+    excerpt();
+
+    function figures() {
+      $('figure').each(function(){
+        if ( $(this).next().is('figure') ){
+          $(this).addClass('half');
+          $(this).next().addClass('half');
+        }
+      });
+    }
+    figures();
+
+    $('.comments-gallery').magnificPopup({
+      type: 'image',
+      gallery:{
+        enabled:true
+      }
+    });
+
+    $('.result .left').imagefill({
+      throttle:1000/60
+    });
+
+    function fullHelpHook() {
+      var w = $(window).width();
+      var $bg = $('.full-inner .bg');
+      $bg.width(w);
+      $bg.css('margin-left', -(w/2));
+    }
+    fullHelpHook();
+    $(window).resize(fullHelpHook);
+
+
+    $('.popup-window form, .m_contacts form').on('submit', function(){
+      var magnificPopup = $.magnificPopup.instance;
+      magnificPopup.close();
+      setTimeout(function(){
+        $('#success-trigger').trigger('click');
+      },300);
+      return false;
+    });
     //=include modules.js
 });

@@ -1,0 +1,104 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Дом каркасный 5х6 на берегу озера
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Реализованные проекты
+        li: a(href="#") Дом каркасный 5х6 на берегу озера
+    .page-title
+      h2 Дом каркасный 5х6 на берегу озера
+    aside.m_sidebar
+      .sidebar-nav
+        ul
+          li: a(href="#") Акции
+          li: a(href="#") Новости
+          li: a(class="current" href="#") Технологии
+          li: a(href="#") Отзывы клиентов
+      .sidebar-comments
+        .title Отзыв заказчика
+        .desc Работы выполнялись профессионалами со знанием дела при возникновении вопросов получала развёрнутый ответ для данного решения. Результатом работ и подходом к делу.
+        .username Синица Людмила Николаевна
+        a(class="comments-gallery" href="images/content/comments-2.jpg")
+          img(src="images/content/comments-2.jpg" alt="")
+    section.content
+      article
+        img(src="images/content/lead-carousel-3.jpg", alt="")
+        .m_realized-project-info
+          .column
+            .row
+              .label Проект:
+              .value: a(href="#") Финский коттедж 5х6
+            .row
+              .label Тип проекта:
+              .value: a(href="#") Коттеджи
+            .row
+              .label Комплектация:
+              .value Брус  массив с отделкой под ключ
+          .column
+            .row
+              .label Местоположение:
+              .value Ленинградская область, Всеволожский район, ул. Название улицы, д. 2
+            .row
+              .label Технологии:
+              .value: a(href="#") брус камерной сушки с отделкой
+        p.lead Блок с seo оптимизированным текстом. Каждая сосна или ель из которой мы изготавливаем пиломатериалы по-своему индивидуальны и неповторимы. Дерево по своей сути является уникальным, живым строительным материалом, его нельзя изготовить, смешав различные компоненты, оно должно вырасти! Именно это свойство древесины и послужило основой для выбора названия нашей организации - «Живой дом».
+        p 7 апреля наша бригада полным составом вернулась из Берлина, где проходила международная выставка "Современное строительство".
+        p В течение 3 дней в берлинском экспоцентре демонстрировались передовые достижения современного строительства.
+        p Архитектор Заха Хадид презентовала свой новый проект малоэтажных типовых вилл, а президент компании Unium рассказал о линейке новых цементных смесей для домов из пеноблоков.
+        p Мы уже внедрили новые знания в работу и готовы делать еще более долговечные, красивые и уютные проекты. Позвоните нам – расскажем подробности!
+        .m_slider
+          .slider-for
+            .slide
+              .image(style="background-image: url('images/content/project-1.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-2.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-3.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-4.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-3.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-2.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-1.jpg')")
+          .slider-nav
+            .slide
+              .image(style="background-image: url('images/content/project-1.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-2.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-3.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-4.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-3.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-2.jpg')")
+            .slide
+              .image(style="background-image: url('images/content/project-1.jpg')")
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+        p Архитектор Заха Хадид презентовала свой новый проект малоэтажных типовых вилл, а президент компании Unium рассказал о линейке новых цементных смесей для домов из пеноблоков.
+        p Мы уже внедрили новые знания в работу и готовы делать еще более долговечные, красивые и уютные проекты. Позвоните нам – расскажем подробности!
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+        .m_article-footer
+          .backward: a(href="#") Назад к списку
+          .social-share
+            script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+            script(src="//yastatic.net/share2/share.js")
+            div(class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+    .m_bottom-carousel
+      .section-title
+        h3 Смотрите так же
+      .bottom-carousel
+        -each post in portfolioInner
+          .slide
+            include ../modules/item/m_item.jade

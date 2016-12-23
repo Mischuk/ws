@@ -1,0 +1,28 @@
+.m_article-footer
+  padding-top 15px
+  border-top 1px solid #dcdcdc
+  clearfix()
+  .backward
+    float left
+    a
+      display inline-block
+      vertical-align middle
+      position relative
+      text-decoration underline
+      font-size 14px
+      color $blue
+      padding 4px 15px
+      &:hover
+        color #111
+        text-decoration none
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -150px -50px;
+        width: 7px;
+        height: 11px;
+        position absolute
+        left 0
+        top 50%
+        margin-top -(@height/2)
+  .social-share
+    float right

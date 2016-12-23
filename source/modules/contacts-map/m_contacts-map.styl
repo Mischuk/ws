@@ -1,0 +1,69 @@
+.m_contacts-map
+  position relative
+  margin-bottom -30px
+  @media SM
+    height 400px
+    margin-top 30px
+  .contacts-info
+    background #fff
+    width 100%
+    margin 30px 0
+    z-index 1
+    padding 0 15px
+    @media SM
+      position absolute
+      top 50%
+      right 15px
+      margin-top -90px
+      width 300px
+      box-shadow 0 10px 29px rgba(0,0,0,0.2)
+      padding 25px 30px
+    @media LG
+      right auto
+      left 50%
+      margin-left -580px
+    .title
+      font-weight bold
+      text-transform uppercase
+      font-size 18px
+    .subway, .bus, .place
+      margin-top 15px
+      padding-left 25px
+      position relative
+      color #494846
+      font-size 14px
+    .subway
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat 0 -250px;
+        width: 13px;
+        height: 16px;
+        position absolute
+        left 0
+        top 50%
+        margin-top -8px
+    .bus
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -50px -250px;
+        width: 16px;
+        height: 11px;
+        position absolute
+        left 0
+        top 50%
+        margin-top -5px
+    .place
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -100px -250px;
+        width: 16px;
+        height: 16px;
+        position absolute
+        left 0
+        top 50%
+        margin-top -8px
+  #mapContacts
+    height 300px
+    width 100%
+    @media SM
+      height 400px

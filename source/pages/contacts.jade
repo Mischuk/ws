@@ -1,0 +1,80 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Контакты
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Компания
+        li: a(href="#") Контакты
+    .page-title
+      h2 Контактная информация
+    section.content
+      .m_contacts
+        .info(itemscope itemtype="http://schema.org/ContactPoint")
+          .clock Режим работы офиса: Без выходных с 11 до 20 часов
+          .phones
+            .title Контактные телефоны
+            .row
+              .label СТРОИТЕЛЬСТВО:
+              .value(itemprop="telephone") +7 (812) 951 03 01
+            .row
+              .label ОТДЕЛКА:
+              .value(itemprop="telephone") +7 (812) 959 07 03
+          .email Электронная почта: <a href="#" itemprop="email">info@woodstandart.ru</a>
+          .address Адрес офиса: <span>Колтуши</span>, <span>д. Старая, дом 24а</span>
+        form
+          .title Связаться с нами
+          .form-columns
+            .form-row
+              input(type="text" placeholder="Ваше имя")
+            .form-row
+              input(type="email" placeholder="Ваш email")
+          .form-row
+            textarea(placeholder="Текст сообщения")
+          .form-columns
+            .form-row
+              .input-file
+                label
+                  input(type="file" class="inp-file")
+                  span.inp-btn Добавить файл
+                  span.inp-lbl Файл не найден
+                .inp-file-result(style="display:none")
+                  .filename
+                  a(class="remove-attached" href="#" title="Удалить файл") ×
+            .form-row
+              button(class="button submit" type="submit") Отправить
+  .m_contacts-map
+    .contacts-info
+      .title Как добраться
+      .subway м. Ладожская
+      .bus Маршрутные такси К-429, К-531, К-533
+      .place Остановка «ПМК»
+    script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script.
+      var mapIcons = { iconLayout: 'default#image', iconImageHref: 'images/marker.png', iconImageSize: [42, 56], iconImageOffset: [-22, -56], balloonPanelMaxMapArea: 0 };
+      var SPB = [59.939095, 30.315868];
+
+      ymaps.ready(init);
+
+      function init () {
+          var myMap = new ymaps.Map("mapContacts", {
+                  center: SPB,
+                  zoom: 15,
+                  controls: ['zoomControl']
+              }, {
+                  searchControlProvider: 'yandex#search'
+              }),
+              myPlacemark = new ymaps.Placemark(SPB, {
+                  hintContent: "Хинт метки",
+              },mapIcons);
+          myMap.behaviors.disable('scrollZoom');
+          myMap.geoObjects.add(myPlacemark);
+      }
+    #mapContacts

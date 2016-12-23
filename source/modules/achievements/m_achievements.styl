@@ -1,0 +1,35 @@
+.m_achievements
+  border-bottom 1px solid #dcdcdc
+  padding-bottom 15px
+  @media SM
+    padding-bottom 30px
+  h3
+    font-size 18px
+    font-weight bold
+    text-transform uppercase
+    margin-bottom 30px
+    @media screen and (min-width: 480px)
+      font-size 24px
+  .list
+    clearfix()
+    .item
+      float left
+      width 50%
+      margin-bottom 15px
+      @media SM
+        width 25%
+        margin-bottom 0
+      @media MD
+        & + .item
+          padding-left 50px
+      .number
+        color $green
+        font-weight bold
+        font-size 50px
+        @media screen and (min-width: 480px)
+          font-size 72px
+      .desc
+        font-size 14px
+        font-weight bold
+        color #111
+        text-transform uppercase

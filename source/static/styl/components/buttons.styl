@@ -137,7 +137,34 @@
     color #fff
     background $green
   &:active
-    position relative
-    top 1px
-    color $blue - 50%
-    box-shadow 0 1px 1px rgba(0,0,0,.64)
+    background $green - 15%
+.excerpt-button
+  font-size 14px
+  color $blue
+  text-decoration underline
+  &:hover
+    color #111
+    text-decoration none
+.mfp-arrow
+  margin-top -10px
+  &:active
+    margin-top -10px
+.mfp-arrow-left,
+.mfp-arrow-right
+  width 12px
+  height 20px
+  &:before,
+  &:after
+    display none
+.mfp-arrow-left
+  left 30px
+  background: url('../images/sprite.png') no-repeat -200px -50px !important
+  retina()
+  &:hover
+    background-position -200px -100px !important
+.mfp-arrow-right
+  right 30px
+  background: url('../images/sprite.png') no-repeat -250px -50px !important
+  retina()
+  &:hover
+    background-position -250px -100px !important

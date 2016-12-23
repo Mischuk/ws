@@ -1,8 +1,8 @@
-.m_project-item
+.m_project-item(itemscope itemtype="http://schema.org/CreativeWork")
   a(class="image" href="#" style="background-image: url('#{post.image}')")
   .bottom
-    h3.title: a(href="#") #{post.title}
-    .desc #{post.description}
+    h3.title: a(href="#" itemprop="name") #{post.title}
+    .desc(itemprop="description") #{post.description}
     if project_item_has_not_details
     else
       .details: a(class="button-border" href="#") Подробнее

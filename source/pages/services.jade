@@ -1,0 +1,111 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Отделка
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Услуги
+        li: a(href="#") Отделка
+    .page-title
+      h2 Отделка
+    aside.m_sidebar
+      .sidebar-help
+        p Задайте нам свой вопрос и мы подробно расскажем о наших услугах, видах работ и типовых проектах, рассчитаем стоимость и подготовим индивидульное предложение!
+        .action: a(class="popup button-white" href="#popup-question") Задать вопрос
+    section.content
+      article
+        img(src="images/content/lead-carousel-2.jpg", alt="")
+        p.lead Блок с seo оптимизированным текстом. Каждая сосна или ель из которой мы изготавливаем пиломатериалы по-своему индивидуальны и неповторимы. Дерево по своей сути является уникальным, живым строительным материалом, его нельзя изготовить, смешав различные компоненты, оно должно вырасти! Именно это свойство древесины и послужило основой для выбора названия нашей организации - «Живой дом».
+        p 7 апреля наша бригада полным составом вернулась из Берлина, где проходила международная выставка "Современное строительство".
+        p В течение 3 дней в берлинском экспоцентре демонстрировались передовые достижения современного строительства.
+        .m_choose-us
+          .title: span Почему <br>выбирают <br>нас?
+          .list
+            .item
+              .icon
+              .desc: span Качество<br>по доступной цене
+            .item
+              .icon
+              .desc: span Соблюдение сроков<br>строительства
+            .item
+              .icon
+              .desc: span Профессиональные<br>строители
+            .item
+              .icon
+              .desc: span Любая форма оплаты:<br> наличный или безналичный расчет
+        p Архитектор Заха Хадид презентовала свой новый проект малоэтажных типовых вилл, а президент компании Unium рассказал о линейке новых цементных смесей для домов из пеноблоков.
+        p Мы уже внедрили новые знания в работу и готовы делать еще более долговечные, красивые и уютные проекты. Позвоните нам – расскажем подробности!
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+        .m_article-types
+          .section-title
+            h3 Варианты отделки
+          .list
+            .item
+              .image(style="background-image: url('images/content/story.jpg')")
+            .item
+              .vertical-outer
+                .vertical-inner
+                  .title Лето
+                  .desc Базовая чистовая отделка для летнего проживания
+                  .cost от 250 000 руб.
+            .item
+              .vertical-outer
+                .vertical-inner
+                  .title Осень
+                  .desc Чистовая отделка с дополнительным утеплением
+                  .cost от 350 000 руб.
+            .item
+              .vertical-outer
+                .vertical-inner
+                  .title Зима
+                  .desc Чистовая отделка для круглогодичного проживания
+                  .cost от 450 000 руб.
+        .m_article-comments
+          .section-title
+            h3 Отзывы клиентов
+            .details
+              a(href="#") Все отзывы
+          .list
+            .item
+              .images
+                .result(style="background-image: url('images/content/project-1.jpg')")
+              .desc
+                p Заказывали у компании каркасный дом под ключ. Сначала долго обсуждали с менеджером, как должен выглядеть наш коттедж, кто в нем будет жить и в какое время года, на какой максимальный и минимальный бюджет рассчитываем. Через пару недель был готов проект, подогнанный специально под нашу большую семью в 10 человек.
+                p Сама стройка началась примерно через месяц, после утверждения проекта. Дом построили быстро, был готов уже в апреле (а обратились в феврале). При приеме работ попросили посмотреть все максимально придирчиво. Мы осмотрели, нашли в паре стыков «подвижки» на пару миллиметров. Это не смертельно.
+                .comments-footer
+                  .username Алексей Хоттабович
+                  .post Владелец каркасного дома в коттеджном поселке Кукуево
+            .item
+              .images
+                .result(style="background-image: url('images/content/project-2.jpg')")
+              .desc
+                p Заказывали у компании каркасный дом под ключ. Сначала долго обсуждали с менеджером, как должен выглядеть наш коттедж, кто в нем будет жить и в какое время года, на какой максимальный и минимальный бюджет рассчитываем. Через пару недель был готов проект, подогнанный специально под нашу большую семью в 10 человек.
+                p Сама стройка началась примерно через месяц, после утверждения проекта. Дом построили быстро, был готов уже в апреле (а обратились в феврале). При приеме работ попросили посмотреть все максимально придирчиво. Мы осмотрели, нашли в паре стыков «подвижки» на пару миллиметров. Это не смертельно.
+                .comments-footer
+                  .username Алексей Хоттабович
+                  .post Владелец каркасного дома в коттеджном поселке Кукуево
+        .m_hook
+          .vertical-outer
+            .vertical-inner
+              p: b Оформите заявку на сайте. Наш менеджер свяжется с вами для уточнения деталей.
+              .action
+                a(class="button-white popup" href="#popup-callback") Оформить заявку
+        .m_article-footer
+          .social-share
+            script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+            script(src="//yastatic.net/share2/share.js")
+            div(class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+    .m_bottom-carousel
+      .section-title
+        h3 Реализованные проекты
+      .bottom-carousel
+        -each post in portfolioInner
+          .slide
+            include ../modules/item/m_item.jade

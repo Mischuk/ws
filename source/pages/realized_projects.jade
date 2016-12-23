@@ -1,0 +1,45 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Реализованные проекты
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Реализованные проекты
+    .page-title
+      h2 Реализованные проекты
+    section.content
+      article
+        .excerpt
+          p  Блок с seo оптимизированным текстом. Каждая сосна или ель из которой мы изготавливаем пиломатериалы по-своему индивидуальны и неповторимы. Дерево по своей сути является уникальным, живым строительным материалом, его нельзя изготовить, смешав различные компоненты, оно должно вырасти! Именно это свойство древесины и послужило основой для выбора названия нашей организации - «Живой дом».
+          .excerpt-hidden(style="display: none")
+            p В далёком 2001 году мы начинали свой путь со строительства небольших деревянных домов и бань. С января 2009 года мы осуществляем свою деятельность под брендом «Живой дом».<br>На сегодняшний день «Живой дом» представляет из себя вертикально интегрированную компанию осуществляющую полный цикл лесозаготовки и деревопереработки.
+            p Мы производим и реализуем широкий ассортимент качественных пиломатериалов и как и прежде строим для вас качественные и не дорогие деревянные дома и коттеджи по различным технологиям.
+          a(class="excerpt-button" href="#") Подробнее
+      .m_realized-projects
+        .row
+          -var project_item_has_not_details = true
+          -each post in realized_projects_large
+            .column
+              include ../modules/project-item/m_project-item.jade
+        .columns
+          -each post in realized_projects
+            .column-3
+              include ../modules/item/m_item.jade
+        .row
+          -var project_item_has_not_details = true
+          -each post in realized_projects_large
+            .column
+              include ../modules/project-item/m_project-item.jade
+        .columns
+          -each post in realized_projects
+            .column-3
+              include ../modules/item/m_item.jade
+      // Пагинация
+      include ../modules/paginations/m_paginations.jade

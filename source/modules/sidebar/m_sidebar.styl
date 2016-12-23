@@ -1,0 +1,90 @@
+.m_sidebar
+  .sidebar-nav
+    background #fff
+    margin-bottom 30px
+    padding 20px
+    box-shadow 0 9px 29px 5px rgba(0,0,0,.2)
+    li
+      & + li
+        margin-top 10px
+    a
+      display inline-block
+      vertical-align middle
+      position relative
+      font-weight bold
+      color $blue
+      font-size 14px
+      text-transform uppercase
+      padding-left 10px
+      &.current,
+      &:hover
+        color #111
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -50px -50px;
+        width: 4px;
+        height: 7px;
+        position absolute
+        left 0
+        top 6px
+  .sidebar-help
+    margin-bottom 30px
+    padding 20px
+    box-shadow 0 9px 29px 5px rgba(0,0,0,.2)
+    font-size 14px
+    line-height 20px
+    color #fff
+    background url("../images/pattern-1.png") repeat 0 0
+    @media LG
+      font-size 16px
+      line-height 24px
+    .action
+      a
+        padding 10px 0
+        text-align center
+        width 100%
+  .sidebar-similar
+    background #fff
+    box-shadow 0 9px 29px 5px rgba(0,0,0,0.2)
+    padding 20px
+    .title
+      text-transform uppercase
+      font-weight bold
+      font-size 20px
+      margin-bottom 15px
+    .item
+      & + .item
+        margin-top 20px
+        border-top 1px solid #dcdcdc
+        padding-top 20px
+    .details
+      border-top 1px solid #dcdcdc
+      padding-top 20px
+      margin-top 20px
+  .sidebar-comments
+    background #fff
+    box-shadow 0 9px 29px 5px rgba(0,0,0,0.2)
+    padding 20px
+    .title
+      text-transform uppercase
+      font-weight bold
+      font-size 20px
+      margin-bottom 15px
+    .desc
+      color #494846
+      font-size 14px
+      line-height 20px
+      margin-bottom 15px
+    .username
+      font-size 14px
+      line-height 20px
+      color #111
+      font-weight bold
+      text-transform uppercase
+    .comments-gallery
+      display block
+      width 30%
+      border 1px solid #dcdcdc
+      margin-top 15px
+      img
+        width 100%

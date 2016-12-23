@@ -1,0 +1,33 @@
+.m_realized-project-info
+  background #fcf7f1
+  border 1px solid #f3eee9
+  margin-bottom 30px
+  margin-top 30px
+  padding 15px
+  @media screen and (min-width: 568px)
+    clearfix()
+  @media MD
+    padding 30px
+  .column
+    @media screen and (min-width: 568px)
+      float left
+      width 50%
+    & + .column
+      margin-top 15px
+  .row
+    & + .row
+      margin-top 15px
+  .label
+    color #494846
+    font-size 14px
+    text-transform uppercase
+    margin-bottom 2px
+  .value
+    font-size 14px
+    color #494846
+    a
+      color $blue
+      text-decoration underline
+      &:hover
+        color #111
+        text-decoration none

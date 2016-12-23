@@ -1,0 +1,80 @@
+.m_projects-carousel
+  position relative
+  border-bottom 1px solid #dcdcdc
+  margin-bottom 30px
+  opacity 0
+  .slick-arrow
+    position absolute
+    width 40px
+    height 40px
+    background #fff
+    border-radius 50%
+    z-index 1
+    top 50%
+    margin-top -60px
+    border none
+    box-shadow 0 5px 19px rgba(0,0,0,0.2)
+    text-indent -9999px
+    font-size 0
+    &.slick-prev
+      left -10px
+      @media LG
+        left -15px
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -200px -50px;
+        width: 12px;
+        height: 20px;
+        position absolute
+        left 50%
+        top 50%
+        margin-left -6px
+        margin-top -10px
+        retina()
+      &:hover
+        &:after
+          background-position -200px -100px
+    &.slick-next
+      right -10px
+      @media LG
+        right -15px
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -250px -50px;
+        width: 12px;
+        height: 20px;
+        position absolute
+        left 50%
+        top 50%
+        margin-left -6px
+        margin-top -10px
+        retina()
+      &:hover
+        &:after
+          background-position -250px -100px
+  .slide
+    height 190px
+    padding-left 5px
+    padding-right 5px
+    @media LG
+      padding-left 10px
+      padding-right 10px
+    .image
+      display block
+      width 100%
+      height 110px
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+    .title
+      padding-top 5px
+      a
+        display inline-block
+        vertical-align middle
+        color $blue
+        font-size 16px
+        line-height 20px
+        text-decoration underline
+        &:hover
+          color #111
+          text-decoration none

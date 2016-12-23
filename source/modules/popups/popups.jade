@@ -1,0 +1,129 @@
+// Popups
+a(class="popup" id="success-trigger" href="#popup-success")
+#popup-success.popup-window.zoom-anim-dialog.mfp-hide
+  .popup-title Спасибо за обращение!
+  p Наш менеджер свяжеться с Вами в ближайшее время.
+  .social-share
+    script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+    script(src="//yastatic.net/share2/share.js")
+    span Мы в соц. сетях:
+    div(class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+#popup-callback.popup-window.zoom-anim-dialog.mfp-hide
+  .popup-title Заказать обратный звонок
+  form
+    .form-row
+      input(type="text" placeholder="Ваше имя")
+    .form-row
+      input(type="tel" placeholder="Ваш номер телефона")
+    .form-row
+      button(class="button submit" type="submit") Заказать
+#popup-question.popup-window.zoom-anim-dialog.mfp-hide
+  .popup-title Задать вопрос специалисту
+  form
+    .form-row
+      input(type="text" placeholder="Ваше имя")
+    .form-row
+      input(type="tel" placeholder="Ваш номер телефона")
+    .form-row
+      input(type="email" placeholder="Ваш email")
+    .form-row
+      textarea(placeholder="Текст сообщения")
+    .form-row
+      .input-file
+        label
+          input(type="file" class="inp-file")
+          span.inp-btn Добавить файл
+          span.inp-lbl Файл не найден
+        .inp-file-result(style="display:none")
+          .filename
+          a(class="remove-attached" href="#" title="Удалить файл") ×
+    .form-row
+      button(class="button submit" type="submit") Задать вопрос
+#popup-request.popup-window.zoom-anim-dialog.mfp-hide
+  .popup-title Отправить заявку
+  form
+    .form-row
+      input(type="text" placeholder="Ваше имя")
+    .form-row
+      input(type="tel" placeholder="Ваш номер телефона")
+    .form-row
+      input(type="email" placeholder="Ваш email")
+    .form-row
+      textarea(placeholder="Текст сообщения")
+    .form-row
+      .input-file
+        label
+          input(type="file" class="inp-file")
+          span.inp-btn Добавить файл
+          span.inp-lbl Файл не найден
+        .inp-file-result(style="display:none")
+          .filename
+          a(class="remove-attached" href="#" title="Удалить файл") ×
+    .form-row
+      button(class="button submit" type="submit") Отправить заявку
+#popup-calc.popup-window.zoom-anim-dialog.mfp-hide
+  .popup-title Заказать расчет стоимости
+  .selected-project
+    .image: a(href="#"): img(src="images/content/project-1.jpg", alt="")
+    .title: a(href="#") Наименование карточки проекта
+  form
+    .form-row
+      input(type="text" placeholder="Ваше имя")
+    .form-row
+      input(type="tel" placeholder="Ваш номер телефона")
+    .form-row
+      input(type="email" placeholder="Ваш email")
+    .form-row
+      input(type="text" placeholder="Адрес строительства")
+    .form-row
+      .label Нужен ли фундамент?
+      .checkboxes
+        .item
+          label
+            input(type="radio" name="ch-a" checked)
+            span.check-icon
+            span.check-label Да
+        .item
+          label
+            input(type="radio" name="ch-a")
+            span.check-icon
+            span.check-label Нет
+    .form-row
+      .label Наличие на участке электричества?
+      .checkboxes
+        .item
+          label
+            input(type="radio" name="ch-b")
+            span.check-icon
+            span.check-label Да
+        .item
+          label
+            input(type="radio" name="ch-b" checked)
+            span.check-icon
+            span.check-label Нет
+    .form-row
+      .label Наличие места для проживания стротелей?
+      .checkboxes
+        .item
+          label
+            input(type="radio" name="ch-c")
+            span.check-icon
+            span.check-label Да
+        .item
+          label
+            input(type="radio" name="ch-c" checked)
+            span.check-icon
+            span.check-label Нет
+    .form-row
+      textarea(placeholder="Текст сообщения")
+    .form-row
+      .input-file
+        label
+          input(type="file" class="inp-file")
+          span.inp-btn Добавить файл
+          span.inp-lbl Файл не найден
+        .inp-file-result(style="display:none")
+          .filename
+          a(class="remove-attached" href="#" title="Удалить файл") ×
+    .form-row
+      button(class="button submit" type="submit") Заказать

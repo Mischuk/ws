@@ -1,0 +1,38 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Онлайн видео с объектов
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Компания
+        li: a(href="#") Онлайн видео с объектов
+    .page-title
+      h2 Онлайн видео с объектов
+    aside.m_sidebar
+      .sidebar-nav
+        ul
+          li: a(href="#") О компании
+          li: a(href="#") Видео
+          li: a(class="current" href="#") Онлайн видео с объектов
+          li: a(href="#") Партнеры
+      .sidebar-help
+        p Задайте нам свой вопрос и мы подробно расскажем о наших услугах, видах работ и типовых проектах, рассчитаем стоимость и подготовим индивидульное предложение!
+        .action: a(class="popup button-white" href="#popup-question") Задать вопрос
+    section.content
+      article
+        .excerpt
+          p  Блок с seo оптимизированным текстом. Каждая сосна или ель из которой мы изготавливаем пиломатериалы по-своему индивидуальны и неповторимы. Дерево по своей сути является уникальным, живым строительным материалом, его нельзя изготовить, смешав различные компоненты, оно должно вырасти! Именно это свойство древесины и послужило основой для выбора названия нашей организации - «Живой дом».
+      .columns
+        -var item_has_video = true
+        -each post in video_list_online
+          .column-3
+            include ../modules/item/m_item.jade
+      // Пагинация
+      include ../modules/paginations/m_paginations.jade

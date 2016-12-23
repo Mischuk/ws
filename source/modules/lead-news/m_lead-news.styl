@@ -1,5 +1,16 @@
 .m_lead-news
   background #fcf7f1
+  .column
+    @media SM
+      float left
+      width 32%
+      margin-top 2%
+      margin-left 2%
+      &:nth-child(2n+1)
+        clear none
+      &:nth-child(3n+1)
+        clear left
+        margin-left 0 !important
   .item
     position relative
   .info

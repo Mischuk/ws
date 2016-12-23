@@ -1,8 +1,11 @@
-.m_item
+.m_item(itemscope itemtype="http://schema.org/ImageObject")
   .image
-    a(class="image" href="#" style="background-image: url('#{post.image}')")
+    if item_has_video
+      a(class="image video" href="http://www.youtube.com/watch?v=7rDKt4C4e5E" style="background-image: url('#{post.image}')" itemprop="contentUrl")
+    else
+      a(class="image" href="#" style="background-image: url('#{post.image}')" itemprop="contentUrl")
   .bottom
-    h3.title: a(href="#") #{post.title}
+    h3.title: a(href="#" itemprop="name") #{post.title}
     if item_has_description
-      .desc #{post.description}
+      .desc(itemprop="description") #{post.description}
     else

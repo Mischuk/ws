@@ -1,0 +1,33 @@
+.m_realized-projects
+  clearfix()
+  @media SM
+    padding-top 15px
+  .columns
+    .column-3:last-child
+      @media screen and (min-width: 480px)
+        display none
+      @media SM
+        display block
+    .m_item .bottom
+      margin-bottom 15px
+  .row
+    clearfix()
+    .column
+      @media SM
+        float left
+        width 49%
+      @media MD
+        width 66%
+      & + .column
+        margin-top 15px
+        @media SM
+          margin-top 0
+          margin-left 2%
+        @media MD
+          width 32%
+      .bottom
+        padding 15px
+        .desc
+          margin-bottom 0
+        .title a
+          font-size 24px

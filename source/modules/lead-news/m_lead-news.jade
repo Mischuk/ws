@@ -6,10 +6,10 @@
         a(href="#") Все новости
     .columns
       -each post in leadNews
-        .column-3
-          .item
-            .image: a(href="#"): img(src="#{post.image}" alt="")
+        .column
+          .item(itemscope itemtype="http://schema.org/CreativeWork")
+            .image: a(href="#"): img(src="#{post.image}" alt="" itemprop="image")
             .info
-              .post-date #{post.date}
-              .title: a(href="#") #{post.title}
-              .desc #{post.description}
+              .post-date(itemprop="dateCreated") #{post.date}
+              .title: a(href="#" itemprop="headline") #{post.title}
+              .desc(itemprop="description") #{post.description}

@@ -27,6 +27,34 @@ footer
   margin-right auto
   &.space
     padding 30px 15px
+main
+  display block
+  max-width $wrapper
+  padding 0 15px
+  margin 0 auto
+  clearfix()
+  .m_sidebar
+    display none
+    @media MD
+      display block
+      float right
+      width 25%
+      padding-left 30px
+      & + .content
+        float left
+        width 75%
+  .content
+    form.m_find-project-form
+      margin-top 30px
+      margin-bottom 15px
+      border 1px solid #88b000
+      .form-title
+        padding-bottom 15px
+        text-align left
+        h2
+          font-size 24px
+    .m_lead-project
+      margin-bottom 30px
 .bg-layout
   anim()
   left 0
@@ -39,7 +67,7 @@ footer
   &.is-active
     position absolute
     opacity .5
-.columns
+.columns, .row
   clearfix()
 .column-2
   width 100%
@@ -53,14 +81,24 @@ footer
 .column-3
   width 100%
   margin-top 15px
+  @media screen and (min-width: 480px)
+    width 49%
+    float left
+    margin-top 2%
+    &:nth-child(even)
+      margin-left 2%
+    &:nth-child(2n+1)
+      clear left
   @media SM
     width 32%
     float left
     margin-top 2%
     margin-left 2%
+    &:nth-child(2n+1)
+      clear none
     &:nth-child(3n+1)
-      margin-left 0
       clear left
+      margin-left 0 !important
 .column-4
   width 100%
   margin-top 15px
@@ -83,3 +121,5 @@ footer
       clear none
       margin-left 0 !important
 
+.excerpt
+  margin-bottom 15px

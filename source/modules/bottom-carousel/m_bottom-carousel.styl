@@ -1,0 +1,79 @@
+.m_bottom-carousel,
+.m_article-carousel
+  position relative
+  margin-top 30px
+  @media MD
+    float left
+    width 100%
+    margin-top 0
+  &.similar-projects
+    background url("../images/wood-background.jpg") repeat 0 0
+    margin-bottom -30px
+    float none
+    margin-top 30px
+    padding-bottom 30px
+    html.no-touchevents &
+      background-attachment fixed
+    .slick-arrow
+      background-color transparent
+    .m_project-inner-item
+      .desc
+        background #fff
+  .article-carousel,
+  .bottom-carousel
+    @media screen and (min-width: 480px)
+      .slick-active
+        .m_item,
+        .m_project-inner-item
+          padding-right 5px
+        & + .slick-active
+          .m_item,
+          .m_project-inner-item
+            padding-right 0
+            padding-left 5px
+            .square,
+            .recommended
+              left 30px
+    @media screen and (min-width: 480px)
+      .slick-active
+        .m_item,
+        .m_project-inner-item
+          padding-right 0
+          padding-left 0
+        & + .slick-active
+          .m_item,
+          .m_project-inner-item
+            padding-left 20px
+  .slick-arrow
+    position absolute
+    top -35px
+    width 12px
+    height 20px
+    background-color #fff
+    text-indent -9999px
+    font-size 0
+    border none
+    background-repeat no-repeat
+    background-image url("../images/sprite.png")
+    retina()
+    &.slick-disabled
+      opacity .2
+    &.slick-next
+      right 0
+      background-position -250px -50px
+      &:hover
+        background-position -250px -100px
+    &.slick-prev
+      right 25px
+      background-position -200px -50px
+      @media SM
+        right 35px
+      &:hover
+        background-position -200px -100px
+  .m_item
+    anim()
+    .bottom
+      margin-bottom 0
+.m_article-carousel
+  float none !important
+  margin-bottom 15px
