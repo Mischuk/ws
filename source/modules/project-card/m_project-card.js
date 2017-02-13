@@ -27,7 +27,7 @@ function projCarousel() {
       slidesToShow: 5,
       slidesToScroll: 1,
       dots: false,
-      arrows: false,
+      arrows: true,
       centerMode: false,
       focusOnSelect: true,
       infinite: false,
