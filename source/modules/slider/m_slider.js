@@ -11,7 +11,7 @@ function slider() {
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: false,
-    arrows: false,
+    arrows: true,
     centerMode: false,
     focusOnSelect: true,
     infinite: false,

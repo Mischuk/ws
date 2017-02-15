@@ -6,6 +6,49 @@
     @media SM
       display block
       margin-top 10px
+
+    .slick-arrow
+      width 40px
+      height 40px
+      background #fff
+      border none
+      font-size 0
+      position absolute
+      top 50%
+      margin-top -20px
+      z-index 1
+      &.slick-prev
+        left 0
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -200px -50px;
+          width: 12px;
+          height: 20px;
+          position absolute
+          left 50%
+          top 50%
+          margin-left -6px
+          margin-top -10px
+          retina()
+        &:hover
+          &:after
+            background-position -200px -100px
+      &.slick-next
+        right 0
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -250px -50px;
+          width: 12px;
+          height: 20px;
+          position absolute
+          left 50%
+          top 50%
+          margin-left -6px
+          margin-top -10px
+          retina()
+        &:hover
+          &:after
+            background-position -250px -100px
     .slide
       height 110px
       padding-left 5px
