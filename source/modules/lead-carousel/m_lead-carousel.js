@@ -2,8 +2,10 @@ function carouselFill() {
   $('.lead-carousel .image').imagefill({
     throttle:1000/60
   });
+
   setTimeout(function(){
     $('.lead-carousel .slide').css('opacity', '1');
+
   }, 300);
 }
 function leadCarousel() {
@@ -13,9 +15,20 @@ function leadCarousel() {
   });
   $leadCarousel.slick({
     dots: false,
-    arrows: false,
-    infinite: false
+    arrows: true,
+    infinite: false,
+    adaptiveHeight: true
     // fade: true
+  });
+
+  $('.popover').webuiPopover({
+     // placement:'top',
+     placement:'auto-top',
+     width: 370
+  });
+
+  $(window).on('resize', function(){
+    WebuiPopovers.hideAll();
   })
 };
 leadCarousel();

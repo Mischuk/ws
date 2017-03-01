@@ -1,14 +1,45 @@
 .m_lead-carousel
-  height 340px
-  overflow hidden
   background: url(../images/wood-background.jpg) repeat 0 0
-  @media MD
-    height 560px
-  .lead-carousel,
-  .slick-list,
-  .slick-track,
-  .slick-slide
-    height 100%
+  .slick-arrow
+    width 40px
+    height 40px
+    position absolute
+    top 50%
+    margin-top -20px
+    border 2px solid #88b000
+    z-index 1
+    font-size 0
+    text-indent -9999px
+    background none
+    display none !important
+    @media LG
+      display block !important
+    &:hover
+      border-color #0070c0
+    &:after
+      content ''
+      background-image url('../images/sprite.png')
+      background-repeat no-repeat 
+      width 12px
+      height 20px
+      position absolute
+      left 50%
+      top 50%
+      margin-left -(@width/2)
+      margin-top -(@height/2)
+      retina()
+    &.slick-prev
+      left 30px
+      &:after
+        background-position -200px -50px
+      &:hover:after
+        background-position -200px -100px
+    &.slick-next
+      right 30px
+      &:after
+        background-position -250px -50px
+      &:hover:after
+        background-position -250px -100px
   .slide
     position relative
     overflow hidden
@@ -47,56 +78,182 @@
             opacity .5
           img
             transform scale(1)
-
-        h2, p, .action
-          opacity 1
-          transform translateX(0) translateY(0)
-        h2
-          transition-delay 0.33s
-        p
-          transition-delay 0.66s
-        .action
-          transition-delay 1s
-    h2,
-    p
-      color #fff
-      text-shadow 0 0 1px rgba(0,0,0,.2)
-    h2,
-    p,
-    .action
-      html.no-touchevents &
-        transition transform 0.66s cubic-bezier(.33,.66,.66,1), opacity 0.66s cubic-bezier(.33,.66,.66,1)
-        transform translateX(15px) translateY(-15px)
-        opacity 0
-    h2
-      font-size 30px
-      line-height 1
-      margin-bottom 20px
-      @media SM
-        font-size 45px
-      @media LG
-        font-size 60px
-    p
-      font-size 14px
-      line-height 20px
-      max-width 80%
-      @media SM
-        font-size 16px
-        line-height 24px
-      @media MD
-        width 60%
     .image
+      display none
       position absolute
       left 0
       top 0
       width 100%
       height 100%
+      @media MD
+        display block
       img
         html.no-touchevents &
           transition transform 2s cubic-bezier(.33,.66,.66,1)
           transform scale(1.2)
           opacity 0
-    .action a
+    .wrapper
+      padding-left 0
+      padding-right 0
       @media MD
-        padding 30px 70px
-        font-size 16px
+        padding-left 15px
+        padding-right 15px
+      @media screen and (min-height: 850px)
+        padding-top 50px
+        padding-bottom 50px
+    .slide-text
+      position relative 
+      padding 15px
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+      @media MD
+        padding-left 0
+        padding-right 0
+        background none !important
+      @media screen and (min-height: 850px) 
+        margin-bottom 30px
+      @media LG
+        padding-left 75px
+      @media screen and (min-width: 1366px)
+        padding-left 0
+      &:before
+        transition opacity 2s cubic-bezier(.33,.66,.66,1)
+        content ''
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+        background #111
+        opacity .5
+        @media MD
+          display none !important
+      h2, .columns
+        position relative 
+        z-index 1
+      h2
+        line-height 1.1
+        margin-bottom 30px
+        @media SM
+          margin-top 25px
+        @media screen and (min-height: 850px)
+          margin-bottom 50px
+        a
+          color #fff
+          font-size 24px
+          line-height 0
+          border-bottom 1px solid rgba(255,255,255,.5)
+          @media SM
+            font-size 28px      
+          @media LG
+            font-size 36px      
+          &:hover
+            border-color #fff
+      .columns
+        color #fff
+        .col-2
+          margin-bottom 30px
+          @media SM
+            display inline-block
+            vertical-align top
+            max-width 48%
+            padding-right 20px
+          @media LG
+            padding-right 40px
+        .title
+          font-size 18px
+          margin-bottom 10px
+          @media LG
+            font-size 24px
+        li
+          font-size 14px
+          padding 8px 0 8px 30px
+          background url("../images/carousel-bullet.png") no-repeat 0 5px
+          @media LG
+            font-size 16px
+            background-position 0 8px
+    .slide-icons
+      clearfix()
+      background #fff
+      padding 30px 15px
+      text-align center
+      @media MD
+        background none
+        padding-top 0
+      .item
+        display inline-block
+        vertical-align top
+        width 49%
+        text-align center
+        margin-bottom 30px
+        line-height 1
+        @media screen and (min-width: 480px)
+          width 32%
+        @media SM
+          width 16%
+          margin-bottom 0
+        @media LG
+          padding-left 20px
+          padding-right 20px
+        a.popover
+          display inline-block
+          vertical-align middle
+          &:focus
+            .title
+              border-color #333
+              @media MD
+                border-color #fff
+            .icon
+              background #328ccc
+              border-color #328ccc
+              img                
+                &.inside
+                  display inline-block
+                &.outside
+                  display none
+        .icon
+          width 120px
+          line-height 120px
+          height 120px
+          text-align center
+          border 1px solid #88b000
+          border-radius 50%
+          margin 0 auto 10px 
+          @media SM
+            width 100px
+            height 100px
+            line-height 100px
+          @media MD
+            width 120px
+            height 120px
+            line-height 120px
+            border-color #fff
+          img
+            vertical-align middle
+            max-width 90%
+            max-height 90%
+            &.inside
+              display none
+              @media MD
+                display inline-block
+            &.outside
+              display inline-block
+              @media MD
+                display none
+        .title
+          display inline
+          color #000000
+          font-size 18px
+          line-height 1.4
+          border-bottom 1px solid rgba(0,0,0,.2)
+          @media SM
+            font-size 16px
+          @media MD
+            font-size 18px
+            color #fff
+            border-color rgba(255,255,255,.3)          
+          &:hover
+            border-color #333
+            @media MD
+              border-color #fff

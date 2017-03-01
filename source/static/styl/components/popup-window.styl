@@ -147,3 +147,78 @@
           & + .check-icon
             box-shadow inset 0 0 0 4px white
             background $green
+.webui-popover  
+  background #328ccc
+  background rgba(50, 140, 204, .95)
+  border none
+  color #fff
+  font-size 16px
+  line-height 24px
+  @media screen and (max-width: 420px)
+    left 2% !important
+    width 96% !important
+  img
+    max-width 100%
+  p:last-child
+    margin-bottom 0
+  a
+    color #fff
+    text-decoration underline
+    &:hover
+      text-decoration none
+.webui-popover.top>.webui-arrow:after, 
+.webui-popover.top-right>.webui-arrow:after, 
+.webui-popover.top-left>.webui-arrow:after
+  border-top-color rgba(50, 140, 204, .95)
+
+#webuiPopover0,
+#webuiPopover2,
+#webuiPopover4,
+#webuiPopover6,
+#webuiPopover8
+  @media screen and (max-width: 479px) and (min-width: 420px)
+    left 2% !important
+  .webui-arrow
+    @media screen and (max-width: 479px)
+      left 26% !important
+    @media screen and (min-width: 420px) and (max-width: 479px)
+      left 29% !important
+  
+#webuiPopover1,
+#webuiPopover3,
+#webuiPopover5,
+#webuiPopover7,
+#webuiPopover9  
+  @media screen and (max-width: 479px) and (min-width: 420px)
+    left auto !important
+    right 2% !important
+  .webui-arrow
+    @media screen and (max-width: 479px)
+      left auto !important
+      right 21% !important
+    @media screen and (min-width: 420px) and (max-width: 479px)
+      right 24% !important
+    @media screen and (min-width: 440px) and (max-width: 479px)
+      right 25% !important
+
+#webuiPopover2,
+#webuiPopover5,
+#webuiPopover8
+  @media screen and (max-width: 500px) and (min-width: 480px)
+    left auto !important
+    right 2% !important
+  .webui-arrow
+    @media screen and (min-width: 480px) and (max-width: 500px)
+      left auto !important
+      right 18% !important
+   
+#webuiPopover0,
+#webuiPopover3,
+#webuiPopover6,
+#webuiPopover9
+  @media screen and (max-width: 500px) and (min-width: 480px)
+    left 2% !important
+  .webui-arrow
+    @media screen and (min-width: 480px) and (max-width: 500px)
+      left 22% !important
+    
