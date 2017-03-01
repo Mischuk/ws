@@ -12,10 +12,13 @@
       line-height 70px
       padding 0
     @media MD
-      width 357px
-      max-width 357px
-      height 115px
-      line-height 115px
+      width 240px
+      max-width 240px
+      height 100px
+      line-height 100px
+    @media MD
+      width 270px
+      max-width 270px
     img,
     a
       display block
@@ -34,9 +37,29 @@
     @media LG
       padding-left 50px
       padding-top 25px
+    @media screen and (min-width: 992px) and (max-width: 1200px)
+      max-width 360px
+      padding-top 30px
     > div
       @media MD
         margin 5px 0
+      @media screen and (min-width: 992px) and (max-width: 1200px)
+        display inline-block
+        vertical-align top
+        &.map-section 
+          margin-right 20px
+          span
+            max-width 150px
+          i
+            vertical-align top
+            margin-right 2px
+        &.video-section 
+          span
+            max-width 120px
+          i
+            vertical-align top
+            margin-top 3px
+            margin-right 2px
       @media LG
         display inline-block
         vertical-align middle
@@ -71,6 +94,16 @@
           position absolute
           left 0
           top 50%
+        &.icon-map
+          @media screen and (min-width: 992px) and (max-width: 1200px)
+            background url("../images/map-section.png") no-repeat 0 0  
+            width 13px
+            height 19px
+        &.icon-video
+          @media screen and (min-width: 992px) and (max-width: 1200px)
+            background url("../images/video-section.png") no-repeat 0 0  
+            width 17px
+            height 11px
       span
         display inline-block
         vertical-align middle
@@ -81,13 +114,12 @@
       height 70px
     @media MD
       text-align left
-      height 115px
+      height 100px
     .email,
     .clock
       display none
       @media MD
         font-size 14px
-        margin-top 5px
         display block
     .clock
       color #494846
@@ -108,6 +140,7 @@
         font-size 20px
       @media MD
         text-align left
+        font-size 16px
   .callback
     position absolute
     right 15px
@@ -118,10 +151,14 @@
       float right
       margin-top 15px
       margin-left 15px
+    @media screen and (min-width: 992px) and (max-width: 1200px)
+      margin-top 15px
+      a
+        padding 14px 20px
   .top-header
     background #fff
     @media MD
-      height 115px
+      height 100px
     .wrapper
       position static
   .bottom-header
@@ -130,8 +167,6 @@
     background #fff
     z-index 2
     border-bottom 1px solid #dcdcdc
-    @media MD
-      height 55px
     &.is-opened
       background url("../images/pattern-1.png") repeat 0 0
       .menu
@@ -200,7 +235,7 @@
           @media MD
             padding 0 10px
             display block
-            line-height 53px
+            line-height 48px
             text-align center
             &:before,
             &:after
@@ -226,7 +261,7 @@
               &:before,
               &:after
                 transition-delay .3s
-                height 55px
+                height 50px
                 width 2px
                 background $blue
                 // margin-top 0

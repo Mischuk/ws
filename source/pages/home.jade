@@ -13,14 +13,29 @@ block content
   include ../modules/lead-pluses/m_lead-pluses.jade
   //- Основые категории проектов
   .m_lead-project
-    .wrapper
-      -each post in leadProjects
-        .column-2
-          include ../modules/project-item/m_project-item.jade
+    .wrapper.space
+      .section-title.no-space
+        h2 Проекты домов 
+      .columns
+        -each post in leadProjects
+          .column-2
+            include ../modules/project-item/m_project-item.jade
   //- Подобрать проект
   include ../modules/find-project/m_find-project.jade
   //- Нужна консультация?
   include ../modules/help-hook/m_help-hook.jade
+  //- Видео
+  .m_lead-video
+    .wrapper.space
+      .section-title
+        h2 Видео
+        .details
+          a(href="#") Все видео
+      .columns
+        -var item_has_video = true
+        -each post in video_lead
+          .column-4
+            include ../modules/item/m_item.jade
   //- Реализованные проекты
   .m_portfolio-projects
     .wrapper.space
