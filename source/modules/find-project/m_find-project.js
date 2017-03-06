@@ -3,10 +3,10 @@ function sidebarFilters() {
   var input0 = document.getElementById('sidebar-input-start');
   var input1 = document.getElementById('sidebar-input-finish');
   var inputs = [input0, input1];
-  var min = 200000;
-  var max = 20000000;
+  var min = +($('#sidebar-input-start').attr('data-price-min'));
+  var max = +($('#sidebar-input-finish').attr('data-price-max'));
   noUiSlider.create(sliderFormat, {
-    start: [ 200000, 20000000 ],
+    start: [ min, max ],
     step: 10000,
     connect: true,
     range: {

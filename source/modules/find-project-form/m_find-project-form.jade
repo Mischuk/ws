@@ -15,8 +15,8 @@ form.m_find-project-form
     label Стоимость, руб.
     .input
       .price-inputs
-        input(type="text" placeholder="От")#sidebar-input-start
-        input(type="text" placeholder="До")#sidebar-input-finish
+        input(type="text" placeholder="От" data-price-min="200000")#sidebar-input-start
+        input(type="text" placeholder="До" data-price-max="20000000")#sidebar-input-finish
       .price-range
         #sidebar-slider-format
   .form-column
