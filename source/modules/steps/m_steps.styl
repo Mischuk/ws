@@ -16,6 +16,15 @@
       width 32%
     @media SM
       width 19.4%
+    &:first-child
+      @media LG
+        text-align left
+        .icon
+          margin-right 0
+          margin-left 20px
+        & + .item
+          &:after
+            left -40px
     & + .item
       @media screen and (min-width: 480px)
         position relative

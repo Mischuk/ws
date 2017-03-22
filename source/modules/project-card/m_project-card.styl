@@ -125,7 +125,7 @@
     .slick-arrow
       width 40px
       height 40px
-      background #fff
+      background none
       border none
       font-size 0
       position absolute
@@ -136,7 +136,7 @@
         left 0
         &:after
           content ''
-          background: url('../images/sprite.png') no-repeat -200px -50px;
+          background: url('../images/sprite.png') no-repeat -200px -100px;
           width: 12px;
           height: 20px;
           position absolute
@@ -147,12 +147,12 @@
           retina()
         &:hover
           &:after
-            background-position -200px -100px
+            background-position -200px -50px
       &.slick-next
         right 0
         &:after
           content ''
-          background: url('../images/sprite.png') no-repeat -250px -50px;
+          background: url('../images/sprite.png') no-repeat -250px -100px;
           width: 12px;
           height: 20px;
           position absolute
@@ -163,7 +163,7 @@
           retina()
         &:hover
           &:after
-            background-position -250px -100px
+            background-position -250px -50px
       &.slick-disabled
         opacity .2
     .slick-list,
