@@ -7,6 +7,7 @@ block data
   include ../static/content/_home.jade
 
 block content
+  .scrolltop: a(href="#")
   main(itemscope itemtype="http://schema.org/Product")
     .m_breadcrumbs
       ul
@@ -14,190 +15,216 @@ block content
         li: a(href="#") Проекты
         li: a(href="#") Подраздел
         li: a(href="#") Карточка проекта
-    .m_projects-carousel
-      .projects-carousel
-        - for (var x = 0; x < 12; x++)
-          .slide
-            a(class="image" href="#" style="background-image: url('images/content/project-2.jpg')")
-            .title: a(href="#") Подраздел проекты домов
-    .page-title
-      h2(itemprop="name") Карточка проекта
-      .projects-nav
-        a(class="prev" href="#"): span Предыдущий проект
-        a(class="next" href="#"): span Следующий проект
-    section.content
-      .m_project-card
-        .gallery
-          .m_slider
-            .slider-for
+    .m_project
+      .page-title
+        .project-info
+          h2(itemprop="name") Карточка проекта
+          a(class="view-complex" href="#") Смотреть комплектации
+        .projects-nav
+          a(class="backward" href="#"): span Обратно в каталог
+          a(class="prev" href="#"): span Предыдущий проект
+          a(class="next" href="#"): span Следующий проект
+      section.content
+        .m_project-card
+          .gallery
+            .m_slider
+              .slider-for
+                .slide
+                  a(href="images/content/project-1.jpg" class="image slider-gallery" style="background-image: url('images/content/project-1.jpg')")
+                .slide
+                  a(href="images/content/project-2.jpg" class="image slider-gallery" style="background-image: url('images/content/project-2.jpg')")
+                .slide
+                  a(href="images/content/project-3.jpg" class="image slider-gallery" style="background-image: url('images/content/project-3.jpg')")
+                .slide
+                  a(href="images/content/project-4.jpg" class="image slider-gallery" style="background-image: url('images/content/project-4.jpg')")
+                .slide
+                  a(href="images/content/project-3.jpg" class="image slider-gallery" style="background-image: url('images/content/project-3.jpg')")
+                .slide
+                  a(href="images/content/project-2.jpg" class="image slider-gallery" style="background-image: url('images/content/project-2.jpg')")
+                .slide
+                  a(href="images/content/project-1.jpg" class="image slider-gallery" style="background-image: url('images/content/project-1.jpg')")
+              .slider-nav
+                .slide
+                  .image(style="background-image: url('images/content/project-1.jpg')")
+                .slide
+                  .image(style="background-image: url('images/content/project-2.jpg')")
+                .slide
+                  .image(style="background-image: url('images/content/project-3.jpg')")
+                .slide
+                  .image(style="background-image: url('images/content/project-4.jpg')")
+                .slide
+                  .image(style="background-image: url('images/content/project-3.jpg')")
+                .slide
+                  .image(style="background-image: url('images/content/project-2.jpg')")
+                .slide
+                  .image(style="background-image: url('images/content/project-1.jpg')")
+            .projects-slider
               .slide
-                a(href="images/content/project-1.jpg" class="image slider-gallery" style="background-image: url('images/content/project-1.jpg')")
+                a(href="images/content/project-1.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-1.jpg')")
               .slide
-                a(href="images/content/project-2.jpg" class="image slider-gallery" style="background-image: url('images/content/project-2.jpg')")
+                a(href="images/content/project-2.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-2.jpg')")
               .slide
-                a(href="images/content/project-3.jpg" class="image slider-gallery" style="background-image: url('images/content/project-3.jpg')")
+                a(href="images/content/project-3.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-3.jpg')")
               .slide
-                a(href="images/content/project-4.jpg" class="image slider-gallery" style="background-image: url('images/content/project-4.jpg')")
+                a(href="images/content/project-4.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-4.jpg')")
               .slide
-                a(href="images/content/project-3.jpg" class="image slider-gallery" style="background-image: url('images/content/project-3.jpg')")
+                a(href="images/content/project-3.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-3.jpg')")
               .slide
-                a(href="images/content/project-2.jpg" class="image slider-gallery" style="background-image: url('images/content/project-2.jpg')")
+                a(href="images/content/project-2.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-2.jpg')")
               .slide
-                a(href="images/content/project-1.jpg" class="image slider-gallery" style="background-image: url('images/content/project-1.jpg')")
-            .slider-nav
-              .slide
-                .image(style="background-image: url('images/content/project-1.jpg')")
-              .slide
-                .image(style="background-image: url('images/content/project-2.jpg')")
-              .slide
-                .image(style="background-image: url('images/content/project-3.jpg')")
-              .slide
-                .image(style="background-image: url('images/content/project-4.jpg')")
-              .slide
-                .image(style="background-image: url('images/content/project-3.jpg')")
-              .slide
-                .image(style="background-image: url('images/content/project-2.jpg')")
-              .slide
-                .image(style="background-image: url('images/content/project-1.jpg')")
-          .projects-slider
-            .slide
-              a(href="images/content/project-1.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-1.jpg')")
-            .slide
-              a(href="images/content/project-2.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-2.jpg')")
-            .slide
-              a(href="images/content/project-3.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-3.jpg')")
-            .slide
-              a(href="images/content/project-4.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-4.jpg')")
-            .slide
-              a(href="images/content/project-3.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-3.jpg')")
-            .slide
-              a(href="images/content/project-2.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-2.jpg')")
-            .slide
-              a(href="images/content/project-1.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-1.jpg')")
-        .description
-          .row
-            .square 253 кв. м.
-            .cost(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
-              p Брус массив от <b itemprop="price" content="600000.00">600 000</b> <span itemprop="priceCurrency" content="RUB">руб</span>
-              p Каркас от <b itemprop="price" content="4800000.00">480 000</b> <span itemprop="priceCurrency" content="RUB">руб</span>
-          .row(itemprop="description") Обладатель дома по этому проекту всегда будет находиться в центре внимания. Архитектура в стиле модерн, панорамное остекление, изысканная иллюминация – он просто создан для творческих натур и ценителей прекрасного!
-          .row
-            h3 Планировка
-            .plans
-              a(class="plans-gallery" href="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446037748.61.jpg"): img(src="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446037748.61.jpg", alt="")
-              a(class="plans-gallery" href="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446038471.06.jpg"): img(src="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446038471.06.jpg", alt="")
-              a(class="plans-gallery" href="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446038471.03.jpg"): img(src="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446038471.03.jpg", alt="")
-          .row
-            h3 Характеристики
-            .characters
-              .column
-                table
-                  tr
-                    td Площадь
-                    td 340
-                  tr
-                    td Этажей
-                    td 2
-                  tr
-                    td Жилая площадь
-                    td 540  м2
-                  tr
-                    td Площадь кухни
-                    td 50  м2
-                  tr
-                    td Количество спален
-                    td 4
-              .column
-                .print
-                  a(href="#") Версия для печати
-                  span.total-size Размер: 237 Кб
+                a(href="images/content/project-1.jpg" class="image slider-gallery-projects" style="background-image: url('images/content/project-1.jpg')")
+          .description
             .row
-              .actions
-                a(class="popup button" href="#popup-calc") Заказать расчет стоимости
-                a(class="popup button" href="#popup-question") Задать вопрос
-      .m_article-footer
-        .social-share
-          script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
-          script(src="//yastatic.net/share2/share.js")
-          div(class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
-      .m_steps
-        .section-title
-          h3 Как мы работаем
-        .list
-          .item
-            .icon
-            .title Свяжитесь с нами
-          .item
-            .icon
-            .title Оговорите детали <br>и заключите контракт
-          .item
-            .icon
-            .title Мы завозим материалы и строим
-          .item
-            .icon
-            .title Вы оплачиваете строительство
-          .item
-            .icon
-            .title Принимаете законченную работу
-      .m_project-card-tabs
-        .section-title
-          h3 Выберите комплектацию проекта
-        .remark <b>Важно!</b><br>От выбранной комплектации зависит стоимость проекта!
-        .project-card-tabs-nav
-          a(class="current" href="#") Каркасный дом
-          a(href="#") Брус естественной влажности
-          a(href="#") Сухой брус
-        .project-card-tabs-content
-          section.current
-            include ../modules/proj-tables/proj-tables.jade
-          section
-            include ../modules/proj-tables/proj-tables.jade
-          section
-            include ../modules/proj-tables/proj-tables.jade
-      .m_help-hook.full-inner
-        .bg
-        .vertical-outer
-          .vertical-inner
-            h2 Нужна консультация?
-            p: i Задайте нам свой вопрос и мы подробно расскажем о наших услугах, видах работ и типовых проектах, рассчитаем стоимость и подготовим индивидульное предложение!
-            .action
-              a(class="button-white popup" href="#popup-question") Задать вопрос
-      .m_comments
-        .section-title
-          h3 Отзывы клиентов
-          .details
-            a(href="#") Все отзывы
-        .row
-          -each post in comments_small
+              .cost(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+                h3 ЦЕНА
+                p Брус массив от <b itemprop="price" content="600000.00">600 000</b> <span itemprop="priceCurrency" content="RUB">руб</span>
+                p Каркас от <b itemprop="price" content="4800000.00">480 000</b> <span itemprop="priceCurrency" content="RUB">руб</span>
+            .row
+              h3 Планировка
+              .plans
+                a(class="plans-gallery" href="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446037748.61.jpg"): img(src="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446037748.61.jpg", alt="")
+                a(class="plans-gallery" href="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446038471.06.jpg"): img(src="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446038471.06.jpg", alt="")
+                a(class="plans-gallery" href="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446038471.03.jpg"): img(src="http://domizkomplekta.ru/media/uploaded/2015/10/28/1446038471.03.jpg", alt="")
+            .row
+              h3 Характеристики
+              .characters
+                .column
+                  table
+                    tr
+                      td Площадь
+                      td 340
+                    tr
+                      td Этажей
+                      td 2
+                    tr
+                      td Жилая площадь
+                      td 540  м2
+                    tr
+                      td Площадь кухни
+                      td 50  м2
+                    tr
+                      td Количество спален
+                      td 4
+              .row
+                .actions
+                  a(class="popup button" href="#popup-calc") Заказать расчет стоимости
+                  a(class="popup button" href="#popup-question") Задать вопрос
+              .row
+                article
+                  p Обладатель дома по этому проекту всегда будет находиться в центре внимания. Архитектура в стиле модерн, панорамное остекление, изысканная иллюминация – он просто создан для творческих натур и ценителей прекрасного!
+                .m_article-footer
+                  .social-share
+                    script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+                    script(src="//yastatic.net/share2/share.js")
+                    div(class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir")
+
+        .m_project-card-tabs#view-complex
+          //.section-title
+          //  h3 Выберите комплектацию проекта
+          .remark <b>Важно!</b><br>От выбранной комплектации зависит стоимость проекта!
+          .project-card-tabs-nav
+            a(class="current" href="#")
+              .lines
+                .top-line
+                .bottom-line
+                .left-line
+                .right-line
+              .info-window
+                .title Подсказка
+                p Здесь вы можете ознакомиться с комплектациями каркасного дома.
+              span Каркасный дом
+            a(href="#")
+              .lines
+                .top-line
+                .bottom-line
+                .left-line
+                .right-line
+              .info-window
+                .title Подсказка
+                p Здесь вы можете ознакомиться с комплектациями из бруса естественной влажности.
+              span Брус естественной влажности
+            a(href="#")
+              .lines
+                .top-line
+                .bottom-line
+                .left-line
+                .right-line
+              .info-window
+                .title Подсказка
+                p Здесь вы можете ознакомиться с комплектациями из сухого бруса.
+              span Сухой брус
+          .project-card-tabs-content
+            section.current
+              include ../modules/proj-tables/proj-tables.jade
+            section
+              include ../modules/proj-tables/proj-tables.jade
+            section
+              include ../modules/proj-tables/proj-tables.jade
+          .download-complex: a(href="#") Скачать комплектации
+        .m_steps
+          .section-title
+            h3 Как мы работаем
+          .list
             .item
-              .images
-                .result(style="background-image: url(#{post.result})")
-                .comment
-                  a(class="comments-gallery" href="#{post.comment}")
-                    img(src="#{post.comment}" alt="")
-              .desc
-                p Заказывали у компании каркасный дом под ключ. Сначала долго обсуждали с менеджером, как должен выглядеть наш коттедж, кто в нем будет жить и в какое время года, на какой максимальный и минимальный бюджет рассчитываем. Через пару недель был готов проект, подогнанный специально под нашу большую семью в 10 человек.
-                p Сама стройка началась примерно через месяц, после утверждения проекта. Дом построили быстро, был готов уже в апреле (а обратились в феврале). При приеме работ попросили посмотреть все максимально придирчиво. Мы осмотрели, нашли в паре стыков «подвижки» на пару миллиметров. Это не смертельно.
-                .comments-footer
-                  .username Алексей Хоттабович
-                  .post Владелец каркасного дома в коттеджном поселке Кукуево
-      article
-        h3 Описание
-        p Обладатель дома по этому проекту всегда будет находиться в центре внимания. Архитектура в стиле модерн, панорамное остекление, изысканная иллюминация – он просто создан для творческих натур и ценителей прекрасного!
-        h4 Отличительные особенности:
-        ul
-          li Создан по каркасной технологии из высокопрочных и экологичных материалов – ценных пород дерева.
-          li Улучшенная планировка: при внешней компактности дом поражает воображение жилой площадью.
-          li Крытая веранда – для званых вечеров на открытом воздухе.
-          li Галерея, в которой можно без труда расположить разнообразные предметы искусства.
-          li Просторная гостиная и 3 гостевые комнаты.
-      .m_bottom-carousel
-        .section-title
-          h3 Дома построеные по этому проекту
-        .bottom-carousel
-          -each post in portfolioInner
-            .slide
-              include ../modules/item/m_item.jade
+              .icon
+              .title Свяжитесь с нами
+            .item
+              .icon
+              .title Оговорите детали <br>и заключите контракт
+            .item
+              .icon
+              .title Мы завозим материалы и строим
+            .item
+              .icon
+              .title Вы оплачиваете строительство
+            .item
+              .icon
+              .title Принимаете законченную работу
+        .m_help-hook.full-inner
+          .bg
+          .vertical-outer
+            .vertical-inner
+              h2 Нужна консультация?
+              p: i Задайте нам свой вопрос и мы подробно расскажем о наших услугах, видах работ и типовых проектах, рассчитаем стоимость и подготовим индивидульное предложение!
+              .action
+                a(class="button-white popup" href="#popup-question") Задать вопрос
+        .m_comments
+          .section-title
+            h3 Отзывы клиентов
+            .details
+              a(href="#") Все отзывы
+          .row
+            -each post in comments_small
+              .item
+                .images
+                  .result(style="background-image: url(#{post.result})")
+                  .comment
+                    a(class="comments-gallery" href="#{post.comment}")
+                      img(src="#{post.comment}" alt="")
+                .desc
+                  p Заказывали у компании каркасный дом под ключ. Сначала долго обсуждали с менеджером, как должен выглядеть наш коттедж, кто в нем будет жить и в какое время года, на какой максимальный и минимальный бюджет рассчитываем. Через пару недель был готов проект, подогнанный специально под нашу большую семью в 10 человек.
+                  p Сама стройка началась примерно через месяц, после утверждения проекта. Дом построили быстро, был готов уже в апреле (а обратились в феврале). При приеме работ попросили посмотреть все максимально придирчиво. Мы осмотрели, нашли в паре стыков «подвижки» на пару миллиметров. Это не смертельно.
+                  .comments-footer
+                    .username Алексей Хоттабович
+                    .post Владелец каркасного дома в коттеджном поселке Кукуево
+        article
+          h3 Описание
+          p Обладатель дома по этому проекту всегда будет находиться в центре внимания. Архитектура в стиле модерн, панорамное остекление, изысканная иллюминация – он просто создан для творческих натур и ценителей прекрасного!
+          h4 Отличительные особенности:
+          ul
+            li Создан по каркасной технологии из высокопрочных и экологичных материалов – ценных пород дерева.
+            li Улучшенная планировка: при внешней компактности дом поражает воображение жилой площадью.
+            li Крытая веранда – для званых вечеров на открытом воздухе.
+            li Галерея, в которой можно без труда расположить разнообразные предметы искусства.
+            li Просторная гостиная и 3 гостевые комнаты.
+  .m_bottom-carousel.similar-projects
+    .wrapper
+      .section-title
+        h3 Дома построеные по этому проекту
+      .bottom-carousel
+        -each post in portfolioInner
+          .slide
+            include ../modules/item/m_item.jade
   .m_bottom-carousel.similar-projects
     .wrapper
       .section-title

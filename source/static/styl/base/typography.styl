@@ -118,13 +118,6 @@ p
     @media screen and (min-width: 480px)
       float left
       width 100%
-    @media screen and (min-width: 666px)
-      width auto
-      width 350px
-      float right
-      margin-top -15px
-    @media screen and (min-width: 768px)
-      width 380px
     a
       position relative
       display inline-block
@@ -133,58 +126,62 @@ p
       line-height 34px
       border 1px solid #dcdcdc
       span
-        color $blur
+        color $blue
         font-size 14px
         text-decoration underline
       &:hover
-        border-color $green
+        border-color $blue
         span
           color #111
           text-decoration none
+    .backward
+      @media screen and (min-width: 568px)
+        padding-left 20px
+        padding-right 5px
+        &:after
+          content ''
+          background: url('../images/project-nav.png') no-repeat 0 0
+          width: 16px;
+          height: 9px;
+          position absolute
+          left 5px
+          top 50%
+          margin-top -(@height/2)
     .prev
       float left
       padding-left 5px
       padding-right 5px
-      @media screen and (min-width: 380px)
-        padding-left 30px
-        padding-right 10px
+      @media screen and (min-width: 568px)
+        padding-left 20px
+        padding-right 5px
         &:after
           content ''
-          background: url('../images/sprite.png') no-repeat -200px -50px;
-          width: 12px;
-          height: 20px;
+          background: url('../images/project-nav.png') no-repeat 0 0;
+          width: 16px;
+          height: 9px;
           position absolute
-          left 10px
+          left 5px
           top 50%
           margin-top -(@height/2)
-          retina()
-      @media screen and (min-width: 768px)
-        padding-left 40px
-        padding-right 20px
-        &:after
-          left 15px
+          transform rotate(-90deg)
     .next
       float right
       padding-right 5px
       padding-left 5px
-      @media screen and (min-width: 380px)
-        padding-left 10px
-        padding-right 30px
+      @media screen and (min-width: 568px)
+        padding-left 5px
+        padding-right 20px
         &:after
           content ''
-          background: url('../images/sprite.png') no-repeat -250px -50px;
-          width: 12px;
-          height: 20px;
+          background: url('../images/project-nav.png') no-repeat 0 0;
+          width: 16px;
+          height: 9px;
           position absolute
-          right 10px
+          right 5px
           top 50%
           margin-top -(@height/2)
-          retina()
-      @media screen and (min-width: 768px)
-        padding-left 20px
-        padding-right 40px
-        &:after
-          right 15px
+          transform rotate(90deg)
+
 article
   p
     font-size 14px

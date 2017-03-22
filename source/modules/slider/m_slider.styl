@@ -98,7 +98,7 @@
     .slick-arrow
       width 40px
       height 40px
-      background #fff
+      background none
       border none
       font-size 0
       position absolute
@@ -111,7 +111,7 @@
           left 5px
         &:after
           content ''
-          background: url('../images/sprite.png') no-repeat -200px -50px;
+          background: url('../images/sprite.png') no-repeat -200px -100px;
           width: 12px;
           height: 20px;
           position absolute
@@ -129,7 +129,7 @@
           right 5px
         &:after
           content ''
-          background: url('../images/sprite.png') no-repeat -250px -50px;
+          background: url('../images/sprite.png') no-repeat -250px -100px;
           width: 12px;
           height: 20px;
           position absolute
@@ -148,3 +148,12 @@
       background-position 50%
       background-size cover
       display block
+      position relative
+      &:after
+        content ''
+        position absolute
+        right 10px
+        top 10px
+        width 16px
+        height 16px
+        background url('../images/scale.png') no-repeat 0 0

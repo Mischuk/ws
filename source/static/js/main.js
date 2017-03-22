@@ -119,5 +119,25 @@ $(function() {
       },300);
       return false;
     });
+
+    $('.view-complex').on('click', function(){
+      $('html, body').animate({
+        scrollTop: $('#view-complex').offset().top
+      }, 1000);
+    });
+
+    $('.scrolltop').on('click', function(){
+      $('html, body').animate({
+        scrollTop: 0
+      }, 1000);
+    })
+
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 350) {
+          $('.scrolltop').addClass('fixed');
+      } else {
+          $('.scrolltop').removeClass('fixed');
+      }
+    });
     //=include modules.js
 });

@@ -166,3 +166,26 @@
   background: url('../images/arrows.png') no-repeat -126px -26px !important
   &:hover
     background-position -127px -109px !important
+
+.scrolltop
+  anim()
+  position fixed
+  right 50px
+  bottom 50px
+  width 75px
+  height 75px
+  z-index 2
+  opacity 0
+  transform translateY(100px)
+  &.fixed
+    opacity 1
+    transform translateY(0)
+  a
+    anim()
+    display block
+    opacity .5
+    background url('../images/scrolltop.png') 0 0 no-repeat
+    width 100%
+    height 100%
+    &:hover
+      opacity 1
