@@ -27,10 +27,47 @@
       @media screen and (min-width: 360px)
         display inline-block
         vertical-align middle
-  .categories-nav
+  .secondary-menu
     display none
     @media MD
       display block
+      float left
+      padding-left 20px
+      padding-top 25px
+      padding-right 20px
+    @media LG
+      padding-left 20px
+      padding-top 15px
+      max-width 320px
+      margin-left 20px
+    @media screen and (min-width: 992px) and (max-width: 1199px)
+      max-width 360px
+      padding-top 25px
+    li
+      display inline-block
+      vertical-align middle
+      margin-right 20px
+      @media LG
+        margin-top 5px
+        margin-bottom 5px
+      a
+        anim()
+        color #000
+        font-weight bold
+        font-size 16px
+        display inline-block
+        vertical-align middle
+        border-bottom 1px solid rgba(0,0,0,.2)
+        @media LG
+          font-size 18px
+        &:hover
+          border-color #000
+
+  .categories-nav
+    display none
+    @media MD
+      // display block
+      display none
       float left
       padding-left 20px
       padding-top 20px
@@ -46,14 +83,14 @@
       @media screen and (min-width: 992px) and (max-width: 1199px)
         display inline-block
         vertical-align top
-        &.map-section 
+        &.map-section
           margin-right 20px
           span
             max-width 150px
           i
             vertical-align top
             margin-right 2px
-        &.video-section 
+        &.video-section
           span
             max-width 120px
           i
@@ -96,12 +133,12 @@
           top 50%
         &.icon-map
           @media screen and (min-width: 992px) and (max-width: 1199px)
-            background url("../images/map-section.png") no-repeat 0 0  
+            background url("../images/map-section.png") no-repeat 0 0
             width 13px
             height 19px
         &.icon-video
           @media screen and (min-width: 992px) and (max-width: 1199px)
-            background url("../images/video-section.png") no-repeat 0 0  
+            background url("../images/video-section.png") no-repeat 0 0
             width 17px
             height 11px
       span
@@ -115,6 +152,16 @@
     @media MD
       text-align left
       height 100px
+    @media LG
+      margin-right 190px
+    .phones,
+    .info
+      @media LG
+        display inline-block
+        vertical-align middle
+    .phones
+      @media LG
+        margin-right 20px
     .email,
     .clock
       display none
@@ -151,16 +198,23 @@
       float right
       margin-top 15px
       margin-left 15px
+    @media LG
+      position absolute
+      bottom auto
+      top 15px
     @media screen and (min-width: 992px) and (max-width: 1200px)
       margin-top 15px
       a
         padding 14px 20px
+
   .top-header
     background #fff
     @media MD
       height 100px
     .wrapper
       position static
+      @media LG
+        position relative
   .bottom-header
     height 50px
     border-top 1px solid #dcdcdc
@@ -221,6 +275,9 @@
           &:hover
             &:after, &:before
               width 100%
+        &.only-responsive
+          @media MD
+            display none
         > a
           anim()
           display block

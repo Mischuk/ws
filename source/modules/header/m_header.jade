@@ -5,6 +5,13 @@ header.m_header
       .logo
         a(href="#")
           img(src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 1.3x" alt="WS" title="WS" itemprop="name")
+      .secondary-menu
+        ul
+          li: a(href="#") Акции
+          li: a(href="#") Новости
+          li: a(href="#") Компания
+          li: a(href="#") Вакансии
+          li: a(href="#") Сертификаты
       .categories-nav
         .map-section
           a(href="#")
@@ -19,10 +26,12 @@ header.m_header
       .contacts
         .vertical-outer
           .vertical-inner
-            .tel(itemprop="telephone") 8 (800) 2000-60
-            .tel(itemprop="telephone") 8 (812) 300-20-20
-            .email: a(href="#" itemprop="address") info@woodstandart.ru
-            .clock Без выходных с 11 до 20 часов
+            .phones
+              .tel(itemprop="telephone") 8 (800) 2000-60
+              .tel(itemprop="telephone") 8 (812) 300-20-20
+            .info
+              .email: a(href="#" itemprop="address") info@woodstandart.ru
+              .clock Без выходных с 11 до 20 часов
   .bottom-header
     .wrapper
       button(class="mobile-menu" type="button")
@@ -44,13 +53,6 @@ header.m_header
             li: a(href="#") Вложенное меню #3
             li: a(href="#") Вложенное меню #4
         li.dropdown-menu
-          a(href="#") Акции
-          ul
-            li: a(href="#") Вложенное меню #1
-            li: a(href="#") Вложенное меню #2
-            li: a(href="#") Вложенное меню #3
-            li: a(href="#") Вложенное меню #4
-        li.dropdown-menu
           a(href="#") Технологии
           ul
             li: a(href="#") Вложенное меню #1
@@ -66,12 +68,10 @@ header.m_header
             li: a(href="#") Вложенное меню #4
         li
           a(href="#") Видео
-        li.dropdown-menu
-          a(href="#") Компания
-          ul
-            li: a(href="#") Вложенное меню #1
-            li: a(href="#") Вложенное меню #2
-            li: a(href="#") Вложенное меню #3
-            li: a(href="#") Вложенное меню #4
         li
           a(href="#") Контакты
+        li.only-responsive: a(href="#") Акции
+        li.only-responsive: a(href="#") Новости
+        li.only-responsive: a(href="#") Компания
+        li.only-responsive: a(href="#") Вакансии
+        li.only-responsive: a(href="#") Сертификаты
