@@ -1,5 +1,33 @@
 .m_lead-carousel
   background: url(../images/wood-background.jpg) repeat 0 0
+  .slick-dots
+    position absolute
+    left 0
+    bottom 25px
+    width 100%
+    text-align center
+    @media screen and (max-width: 992px)
+      display none !important
+    li
+      display inline-block
+      vertical-align middle
+      margin 0 4px
+      button
+        anim()
+        font-size 0
+        text-indent -9999px
+        border 2px solid $green
+        padding 5px
+        border-radius 50%
+        background none
+        &:hover
+          border-color $blue
+      &.slick-active
+        button
+          background $green
+          &:hover
+            border-color $green
+            cursor default
   .slick-arrow
     width 40px
     height 40px
@@ -19,7 +47,7 @@
     &:after
       content ''
       background-image url('../images/sprite.png')
-      background-repeat no-repeat 
+      background-repeat no-repeat
       width 12px
       height 20px
       position absolute
@@ -102,7 +130,7 @@
         padding-top 50px
         padding-bottom 50px
     .slide-text
-      position relative 
+      position relative
       padding 15px
       background-repeat no-repeat
       background-position 50%
@@ -111,7 +139,7 @@
         padding-left 0
         padding-right 0
         background none !important
-      @media screen and (min-height: 850px) 
+      @media screen and (min-height: 850px)
         margin-bottom 30px
       @media LG
         padding-left 75px
@@ -130,7 +158,7 @@
         @media MD
           display none !important
       h2, .columns
-        position relative 
+        position relative
         z-index 1
       h2
         line-height 1.1
@@ -145,9 +173,9 @@
           line-height 0
           border-bottom 1px solid rgba(255,255,255,.5)
           @media SM
-            font-size 28px      
+            font-size 28px
           @media LG
-            font-size 36px      
+            font-size 36px
           &:hover
             border-color #fff
       .columns
@@ -207,7 +235,7 @@
             .icon
               background #328ccc
               border-color #328ccc
-              img                
+              img
                 &.inside
                   display inline-block
                 &.outside
@@ -219,7 +247,7 @@
           text-align center
           border 1px solid #88b000
           border-radius 50%
-          margin 0 auto 10px 
+          margin 0 auto 10px
           @media SM
             width 100px
             height 100px
@@ -252,7 +280,7 @@
           @media MD
             font-size 18px
             color #fff
-            border-color rgba(255,255,255,.3)          
+            border-color rgba(255,255,255,.3)
           &:hover
             border-color #333
             @media MD

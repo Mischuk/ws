@@ -14,7 +14,7 @@ function leadCarousel() {
     carouselFill();
   });
   $leadCarousel.slick({
-    dots: false,
+    dots: true,
     arrows: true,
     infinite: false,
     adaptiveHeight: true
